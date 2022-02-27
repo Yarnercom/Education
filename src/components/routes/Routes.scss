@@ -1,0 +1,36 @@
+.ape{
+  &__container{}
+  &__form{
+    &-input{}
+  }
+  &__direction{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    &-content{
+      display: flex;
+      column-gap: 36.19px;
+      align-items: center;
+    }
+    &-price{}
+    &-title{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 32px;
+      color: #000000;
+    }
+    &-subtitle{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+  }
+}

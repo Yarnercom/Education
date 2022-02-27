@@ -1,0 +1,129 @@
+.firstPage{
+  &__container{
+    display: flex;
+    column-gap: 32px;
+    margin: 66px 0 64px 0;
+  }
+  &__education{
+    background: url("./../../../assets/background/Group 184 5.png") no-repeat center center;
+    background-size: cover;
+    width: 65%;
+    padding: 40px;
+    position: relative;
+    &-title{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 55px;
+      line-height: 60px;
+      color: #000000;
+      margin-bottom: 21px;
+    }
+    &-subtitle{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 40px;
+      color: #000000;
+      margin-bottom: 68px;
+    }
+    &-price{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+    &-pos{
+      position: absolute;
+      top: 42px;
+      right: 42px;
+      cursor: pointer;
+    }
+    &-city{
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+  }
+  &__order{
+    background: #000000;
+    padding: 32px 40px 40px 40px;
+    width: 35%;
+    &-dFlex{
+      display: flex;
+      column-gap: 45px;
+      align-items: center;
+      margin-bottom: 95px;
+    }
+    &-title{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 40px;
+      color: #FFFFFF;
+    }
+    &-frac{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 22px;
+      text-align: right;
+      color: #787878;
+    }
+    &-subtitle{
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+
+    }
+    &-navbar{
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      column-gap: 10px;
+      &_list{
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: #A8A8A8;
+        transition: .2s;
+        cursor: pointer;
+        border-radius: 28px;
+        border: 1px solid #333333;
+        padding: 4px 10px;
+        &:hover{
+          color: #FFFFFF;
+          transition: .2s;
+        }
+      }
+    }
+    &-btn{
+      background: #252525;
+      border-radius: 4px;
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: #4A4A4A;
+      padding: 14px 78px;
+      margin-top: 57px;
+      cursor: pointer;
+    }
+  }
+}

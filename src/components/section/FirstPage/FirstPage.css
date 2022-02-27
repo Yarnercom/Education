@@ -1,0 +1,128 @@
+.firstPage__container {
+  display: flex;
+  column-gap: 32px;
+  margin: 66px 0 64px 0;
+}
+.firstPage__education {
+  background: url("./../../../assets/background/Group 184 5.png") no-repeat center center;
+  background-size: cover;
+  width: 65%;
+  padding: 40px;
+  position: relative;
+}
+.firstPage__education-title {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 60px;
+  color: #000000;
+  margin-bottom: 21px;
+}
+.firstPage__education-subtitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 40px;
+  color: #000000;
+  margin-bottom: 68px;
+}
+.firstPage__education-price {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.firstPage__education-pos {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+  cursor: pointer;
+}
+.firstPage__education-city {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+.firstPage__order {
+  background: #000000;
+  padding: 32px 40px 40px 40px;
+  width: 35%;
+}
+.firstPage__order-dFlex {
+  display: flex;
+  column-gap: 45px;
+  align-items: center;
+  margin-bottom: 95px;
+}
+.firstPage__order-title {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.firstPage__order-frac {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: right;
+  color: #787878;
+}
+.firstPage__order-subtitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.firstPage__order-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 10px;
+}
+.firstPage__order-navbar_list {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #A8A8A8;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 28px;
+  border: 1px solid #333333;
+  padding: 4px 10px;
+}
+.firstPage__order-navbar_list:hover {
+  color: #FFFFFF;
+  transition: 0.2s;
+}
+.firstPage__order-btn {
+  background: #252525;
+  border-radius: 4px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #4A4A4A;
+  padding: 14px 78px;
+  margin-top: 57px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=FirstPage.css.map */

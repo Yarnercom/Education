@@ -1,0 +1,16 @@
+.univer{
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+ &__container{
+   display: flex;
+   column-gap: 80px;
+   padding: 56px 0;
+   border-bottom: 2px solid #DFDFDE80;
+   border-top: 2px solid #DFDFDE80;
+ }
+  img{
+    width: 160px;
+    height: 72px;
+  }
+}

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Directions.css'
 import Arrow from './../../../assets/icon/Vector.svg'
 import {NavLink} from 'react-router-dom'
-import Content from "../../Content/Content";
+import Showeucation from "../../Content/Showeucation";
 // import {CSSTransition} from 'react-transition-group'
 
 
@@ -41,7 +41,7 @@ const Directions = () => {
                     </ul>
                     <div className='line'> </div>
                             <div>
-                                <Content/>
+                                <Showeucation/>
                             </div>
                     <div className='directions__showMore'>
                         <p className='directions__showMore-more'>Показать ещё 24 направления</p>

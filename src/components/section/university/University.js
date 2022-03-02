@@ -7,7 +7,7 @@ import National from './../../../assets/university/national.png';
 import Tula from './../../../assets/university/tula.png';
 import './Univer.css'
 
-const Univer = () => {
+const University = () => {
     return (
         <section className='univer'>
             <div className='univer__container'>
@@ -24,4 +24,4 @@ const Univer = () => {
     );
 };
 
-export default Univer;
+export default University;

@@ -1,18 +1,22 @@
 import React from 'react';
+import FirstPage from "../section/FirstPage/FirstPage";
+import Directions from "../section/Directions/Directions";
+import Diploma from "../section/Diploma/Diploma";
+import Reviews from "../section/Reviews/Reviews";
+import EducationMobile from "../section/EducationMobile/EducationMobile";
 import {Route, Routes} from 'react-router-dom'
-import Higher from "../routes/Higher";
-import Average from "../routes/Average";
-import Ape from "../routes/Ape";
+import University from "../section/university/University";
 
 const Content = () => {
     return (
-        <div>
-            <Routes>
-                <Route path='/' element={<Higher/>}/>
-                <Route path='/average' element={<Average/>}/>
-                <Route path='/ape' element={<Ape/>}/>
-            </Routes>
-        </div>
+        <>
+            <FirstPage/>
+            <University/>
+            <Directions/>
+            <Diploma/>
+            <Reviews/>
+            <EducationMobile/>
+        </>
     );
 };
 

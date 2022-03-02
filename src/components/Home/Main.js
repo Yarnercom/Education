@@ -1,6 +1,6 @@
 import React from 'react';
 import FirstPage from "../section/FirstPage/FirstPage";
-import Univer from "../section/university/Univer";
+import University from "../section/university/University";
 import Directions from "../section/Directions/Directions";
 import Diploma from "../section/Diploma/Diploma";
 import Reviews from "../section/Reviews/Reviews";
@@ -11,7 +11,7 @@ const Main = () => {
     return (
         <section>
             <FirstPage/>
-            <Univer/>
+            <University/>
             <Directions/>
             <Diploma/>
             <Reviews/>

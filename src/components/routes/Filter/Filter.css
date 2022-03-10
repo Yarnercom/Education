@@ -99,6 +99,9 @@
 .direction__themeEducation {
   margin: 45px 0 14px 0;
 }
+.direction__flex {
+  display: flex;
+}
 
 .direction__customCheckbox {
   position: absolute;

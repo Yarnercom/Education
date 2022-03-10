@@ -4,8 +4,8 @@ import Directions from "../section/Directions/Directions";
 import Diploma from "../section/Diploma/Diploma";
 import Reviews from "../section/Reviews/Reviews";
 import EducationMobile from "../section/EducationMobile/EducationMobile";
-import {Route, Routes} from 'react-router-dom'
 import University from "../section/university/University";
+
 
 const Content = () => {
     return (

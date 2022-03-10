@@ -1,9 +1,222 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "pizza": [
+    {
+      "id": 0,
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "title": "Пепперони Фреш с перцем",
+      "types": [
+        0,
+        1
+      ],
+      "sizes": [
+        26,
+        30,
+        40
+      ],
+      "price": 245,
+      "priceMiddle": 399,
+      "priceLarge": 499,
+      "categories": "pizza",
+      "rating": 4
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "economy": [
+    {
+      "id": 0,
+      "title": "Экономика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
   ],
-  "profile": { "name": "typicode" }
+  "Jurisprudence": [
+    {
+      "id": 0,
+      "title": "Юриспруденция",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "Journalism": [
+    {
+      "id": 0,
+      "title": "Журналистика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "MedicalOptics": [
+    {
+      "id": 0,
+      "title": "Медицинская оптика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "TradingBusiness": [
+    {
+      "id": 0,
+      "title": "Торговое дело",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "FireSafety": [
+    {
+      "id": 0,
+      "title": "Пожарная безопасность",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "LandAndPropertyRelations": [
+    {
+      "id": 0,
+      "title": "Земельно-имущественные отношения",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "HotelBusiness": [
+    {
+      "id": 0,
+      "title": "Гостиничное дело",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
+  ],
+  "all": {
+    "pizza": [
+      {
+        "id": 0,
+        "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+        "title": "Пепперони Фреш с перцем",
+        "types": [
+          0,
+          1
+        ],
+        "sizes": [
+          26,
+          30,
+          40
+        ],
+        "price": 245,
+        "priceMiddle": 399,
+        "priceLarge": 499,
+        "categories": "pizza",
+        "rating": 4
+      }
+    ],
+    "economy": [
+      {
+        "id": 0,
+        "title": "Экономика",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "Jurisprudence": [
+      {
+        "id": 0,
+        "title": "Юриспруденция",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "Journalism": [
+      {
+        "id": 0,
+        "title": "Журналистика",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "MedicalOptics": [
+      {
+        "id": 0,
+        "title": "Медицинская оптика",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "TradingBusiness": [
+      {
+        "id": 0,
+        "title": "Торговое дело",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "FireSafety": [
+      {
+        "id": 0,
+        "title": "Пожарная безопасность",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "LandAndPropertyRelations": [
+      {
+        "id": 0,
+        "title": "Земельно-имущественные отношения",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ],
+    "HotelBusiness": [
+      {
+        "id": 0,
+        "title": "Гостиничное дело",
+        "price": 10500,
+        "magistracy": 13000,
+        "undergraduate": 12000,
+        "specialty": 11000,
+        "onlineProtection": true
+      }
+    ]
+  }
 }

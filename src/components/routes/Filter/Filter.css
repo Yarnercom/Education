@@ -55,6 +55,7 @@
 }
 .direction__input {
   background: #F2F2F2;
+  outline: none;
   border-radius: 4px;
   padding: 14px 90px 14px 52px;
   font-family: Inter, sans-serif;
@@ -64,9 +65,16 @@
   line-height: 28px;
   letter-spacing: 0.01em;
   color: #000000;
+  border: 1px solid white;
 }
 .direction__input::placeholder {
   color: #A8A8A8;
+}
+.direction__input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.direction__input:focus {
+  outline: 1px solid #2400FF;
 }
 .direction__form {
   width: 312px;

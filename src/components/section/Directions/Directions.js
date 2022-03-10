@@ -1,8 +1,16 @@
 import React, {useState} from 'react';
 import './Directions.css'
 import Arrow from './../../../assets/icon/Vector.svg'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Routes, Route} from 'react-router-dom'
 import Showeucation from "../../Content/Showeucation";
+import Average from "../../routes/Average";
+import Higher from "../../routes/Higher";
+import Tourism from "../../../assets/direction/Туризм.svg";
+import Jurisprudence from "../../../assets/direction/юриспруденция.svg";
+import Economy from "../../../assets/direction/экономика.svg";
+import Journalism from "../../../assets/direction/Журналистика.svg";
+import Medical from "../../../assets/direction/Медицинская оптика.svg";
+import Public from "../../../assets/direction/Реклама и связи с общественностью.svg";
 // import {CSSTransition} from 'react-transition-group'
 
 

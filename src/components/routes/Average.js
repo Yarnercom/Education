@@ -25,12 +25,12 @@ const Average = () => {
                     <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
                 </div>
                 <div className='directions__cards-list economy'>
-                    <p className='directions__cards-title'>Экономика</p>
-                    <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
-                    <p className='directions__cards-subtitle'>• от 2,5 лет</p>
-                    <img className='directions__cards-img' src={Economy} alt="Economy"/>
-                    <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
-                </div>
+                <p className='directions__cards-title'>Экономика</p>
+                <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
+                <p className='directions__cards-subtitle'>• от 2,5 лет</p>
+                <img className='directions__cards-img' src={Economy} alt="Economy"/>
+                <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
+            </div>
                 <div className='directions__cards-list journalism'>
                     <p className='directions__cards-title'>Журналистика</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>

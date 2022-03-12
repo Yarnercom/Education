@@ -101,6 +101,12 @@
 }
 .direction__flex {
   display: flex;
+  column-gap: 104px;
+}
+.direction__content-card_item {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 .direction__customCheckbox {

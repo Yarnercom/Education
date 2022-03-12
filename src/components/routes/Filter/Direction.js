@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink, useSearchParams} from "react-router-dom";
 import './../../section/Directions/Directions.css'
 import './Filter.css'
 import './../Routes.css'
@@ -10,17 +10,44 @@ import Economy from "../../../assets/direction/экономика.svg";
 
 const Direction = () => {
 
-    const [searchShow, setSearchShow] = useState(false);
+
+    // const [searchParams, setSearchParams] = useSearchParams();
+    //
+    // const postsWi = searchParams.get('post') || '';
+
+
+    // const [posts, setPosts] = useState([]);
+
+
+    // useEffect(() =>{
+    //     fetch('http://localhost:8080/all')
+    //         .then(res => res.json())
+    //         .then(data => setPosts(data))
+    // }, []);
+    //
+    // const handleSubmit =(e) =>{
+    //   e.preventDefault();
+    //   const form = e.target;
+    //
+    //   const query = form.search.value;
+    //
+    //   setSearchParams({all: query})
+    // };
+
+    const [search, setSearch] = useState(false);
 
     const [all, setAll] = useState([]);
 
-    const search = (text) =>{
-        axios('http://localhost:8080/all')
-            .then(({data})=> setAll(Object.values(data).reduce((acc, rec)=>{
-                return [...acc, rec.filter((item)=> item.title.toUpperCase().startsWith(text))]
-            }, []).flat()))
+    const searchHandler = (text) =>{
+        if (text) {
+            axios('http://localhost:8080/all')
+                .then(({data}) => setAll(Object.values(data).reduce((acc, rec) => {
+                    return [...acc, rec.filter((item) => item.title.toUpperCase().toLowerCase().startsWith(text))]
+                }, []).flat()))
+        }else {
+            setAll([])
+        }
     };
-
 
     return (
         <section>
@@ -31,20 +58,20 @@ const Direction = () => {
                             в Санкт-Петербурге</h2>
                         <p className='direction__subtitle'>Мы сотрудничаем с 10 престижными колледжами по программам дистанционного онлайн-обучения.</p>
 
+                        <ul className='direction__navbar'>
+                            <NavLink to='/filter' className='direction__navbar-list'>
+                                Высшее<sup className='sup'>14</sup>
+                            </NavLink>
+                            <NavLink to='/filter' className='direction__navbar-list'>
+                                Среднее <sup className='sup'>9</sup>
+                            </NavLink>
+                            <NavLink to='/filter' className='direction__navbar-list'>
+                                ДПО <sup className='sup'>36</sup>
+                            </NavLink>
+                        </ul>
 
                               <div className='direction__flex'>
                                   <div className='direction__filter'>
-                                      <ul className='direction__navbar'>
-                                          <NavLink to='/filter' className='direction__navbar-list'>
-                                              Высшее<sup className='sup'>14</sup>
-                                          </NavLink>
-                                          <NavLink to='/filter' className='direction__navbar-list'>
-                                              Среднее <sup className='sup'>9</sup>
-                                          </NavLink>
-                                          <NavLink to='/filter' className='direction__navbar-list'>
-                                              ДПО <sup className='sup'>36</sup>
-                                          </NavLink>
-                                      </ul>
                                       <div className='line'> </div>
                                       <div className='direction__box1'>
                                           <form className='direction__form'>
@@ -52,8 +79,10 @@ const Direction = () => {
                                                   <img className='direction__search' src={Search} alt="search"/>
                                                   <input className='direction__input' placeholder='Поиск по направлениям'
                                                          type="text"
-                                                         onChange={(e)=> search(e.target.value)}
+                                                         name='search'
+                                                         onChange={(e)=> searchHandler(e.target.value)}
                                                   />
+                                                  <button type='button' onClick={()=> setSearch(!search)}>icon</button>
                                               </label>
                                               <div className='direction__switch'>
                                                   <input className="switch" id="switch1" type="checkbox"/>
@@ -124,10 +153,17 @@ const Direction = () => {
                                       </div>
                                   </div>
                                   <div className='direction__content'>
-                                      <ul className='direction__content-card'>
+                                      <ul className='direction__content-card' style={{display: `${search && all.length ? 'inline-block': 'none'}`}}>
                                           {
                                               all.map((item, idx)=>(
                                                   <li key={idx} className='direction__content-card_item'>
+                                                      <div className='directions__cards-list economy'>
+                                                          <p className='directions__cards-title'>{item.title}</p>
+                                                          <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>
+                                                          <p className='directions__cards-subtitle'>• от 2,5 лет</p>
+                                                          <img className='directions__cards-img' src={Economy} alt="Economy"/>
+                                                          <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
+                                                      </div>
                                                       <div className='directions__cards-list economy'>
                                                           <p className='directions__cards-title'>{item.title}</p>
                                                           <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>

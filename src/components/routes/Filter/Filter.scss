@@ -102,6 +102,12 @@
   }
   &__flex{
     display: flex;
+    column-gap: 104px;
+  }
+  &__content-card_item{
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
   }
 }
 

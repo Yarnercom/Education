@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import {Routes, Route} from 'react-router-dom'
 import Direction from "../routes/Filter/Direction";
 import './Home.css'
+import Universities from "../routes/Filter/Universities";
 
 
 const Header = () => {
@@ -89,6 +90,7 @@ const Header = () => {
             </div>
             <Routes>
                 <Route path='/direction' element={<Direction/>}/>
+                <Route path='/universities' element={<Universities/>}/>
             </Routes>
         </header>
     );

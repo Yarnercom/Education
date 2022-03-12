@@ -57,11 +57,6 @@ const Direction = () => {
                             </NavLink>
                         </ul>
 
-                        <Slider
-                        value={val}
-                        onChange={updateRange}
-                        />
-
 
                               <div className='direction__flex'>
                                   <div className='direction__filter'>

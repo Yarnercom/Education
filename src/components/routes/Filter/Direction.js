@@ -8,31 +8,18 @@ import './../switch/switch.css'
 import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
 
+import {Slider} from "@mui/material";
+
 const Direction = () => {
 
 
-    // const [searchParams, setSearchParams] = useSearchParams();
-    //
-    // const postsWi = searchParams.get('post') || '';
+    const [val, setVal] = useState([1, 100]);
+
+    const updateRange = (e,data) =>{
+        setVal(data)
+    };
 
 
-    // const [posts, setPosts] = useState([]);
-
-
-    // useEffect(() =>{
-    //     fetch('http://localhost:8080/all')
-    //         .then(res => res.json())
-    //         .then(data => setPosts(data))
-    // }, []);
-    //
-    // const handleSubmit =(e) =>{
-    //   e.preventDefault();
-    //   const form = e.target;
-    //
-    //   const query = form.search.value;
-    //
-    //   setSearchParams({all: query})
-    // };
 
     const [search, setSearch] = useState(false);
 
@@ -69,6 +56,12 @@ const Direction = () => {
                                 ДПО <sup className='sup'>36</sup>
                             </NavLink>
                         </ul>
+
+                        <Slider
+                        value={val}
+                        onChange={updateRange}
+                        />
+
 
                               <div className='direction__flex'>
                                   <div className='direction__filter'>
@@ -139,13 +132,13 @@ const Direction = () => {
                                                   <h2>Длительность обучения</h2>
                                                   <label className='slider'>
                                                       <p>1 год — 5 лет</p>
-                                                      <output htmlFor='fader' id='volume'>0</output>
-                                                      <input type="range" id='fader' min='0' max='500' step='1'/>
+                                                      <Slider value={val} onChange={updateRange}/>
                                                   </label>
+
                                                   <h2>Стоимость семестра *</h2>
                                                   <label>
                                                       <p>0 ₽ — 200 000 ₽</p>
-                                                      <input type="range"/>
+                                                      <Slider value={val} onChange={updateRange}/>
                                                   </label>
                                               </form>
                                               <p>* Семестр — это 6 месяцев, полугодие</p>

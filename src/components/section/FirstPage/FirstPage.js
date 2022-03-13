@@ -1,9 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './FirstPage.css'
 import Share from './../../../assets/icon/share.svg'
 import City from './../../../assets/picture/City.png'
 
 const FirstPage = () => {
+
+    const [choose, setChoose] = useState('');
+
+    const data = [
+        {
+            title: '9 классов'
+        },
+        {
+            title: '11 классов'
+        },
+        {
+            title: 'Училище'
+        },
+        {
+            title: 'Колледж'
+        },
+        {
+            title: 'Техникум'
+        },
+        {
+            title: 'Неоконченное высшее'
+        },
+        {
+            title: 'Высшее'
+        }
+    ];
+
+
     return (
         <section className='firstPage'>
             <div className='container'>
@@ -17,7 +45,7 @@ const FirstPage = () => {
                         </div>
                         <p className='firstPage__education-subtitle'>Мы — единая приёмная комиссия вузов
                             и колледжей по дистанционным программам обучения</p>
-                        <p className='firstPage__education-price'>• от 12 500 ₽ семестр   •   от 2,5 лет   •   100% онлайн</p>
+                        <p className='firstPage__education-price'>• от 12 500 ₽ семестр • от 2,5 лет • 100% онлайн</p>
                         <img className='firstPage__education-city' src={City} alt="city"/>
                     </div>
                     <div className='firstPage__order'>
@@ -27,15 +55,22 @@ const FirstPage = () => {
                         </div>
                         <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
                         <ul className='firstPage__order-navbar'>
-                            <li className='firstPage__order-navbar_list'>9 классов</li>
-                            <li className='firstPage__order-navbar_list'>11 классов</li>
-                            <li className='firstPage__order-navbar_list'>Училище</li>
-                            <li className='firstPage__order-navbar_list'>Колледж</li>
-                            <li className='firstPage__order-navbar_list'>Техникум</li>
-                            <li className='firstPage__order-navbar_list'>Неоконченное высшее</li>
-                            <li className='firstPage__order-navbar_list'>Высшее</li>
+                            {
+                                data.map((item) => (
+                                    <li className={`${choose === 'first' ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
+                                        onClick={() => setChoose('first')}>{item.title}</li>
+                                ))
+                            }
+                            {/*<li className='firstPage__order-navbar_list'>11 классов</li>*/}
+                            {/*<li className='firstPage__order-navbar_list'>Училище</li>*/}
+                            {/*<li className='firstPage__order-navbar_list'>Колледж</li>*/}
+                            {/*<li className='firstPage__order-navbar_list'>Техникум</li>*/}
+                            {/*<li className='firstPage__order-navbar_list'>Неоконченное высшее</li>*/}
+                            {/*<li className='firstPage__order-navbar_list'>Высшее</li>*/}
                         </ul>
-                        <button className='firstPage__order-btn' type='button'>Отправить заявку</button>
+                        <div className='firstPage__order-block'>
+                            <button className='firstPage__order-btn' type='button'>К шагу 2 из 3</button>
+                        </div>
                     </div>
                 </div>
             </div>

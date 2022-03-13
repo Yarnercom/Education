@@ -1,41 +1,50 @@
-.header{
-  &__container{
+.header {
+  &__container {
     display: flex;
     justify-content: space-between;
     padding-top: 21px;
     align-items: center;
   }
-  &__profile{
+
+  &__profile {
     display: flex;
     column-gap: 16px;
     align-items: center;
   }
-  &__title{}
-  &__right{
+
+  &__title {
+  }
+
+  &__right {
     display: flex;
     column-gap: 31px;
     align-items: center;
   }
-  &__social{
+
+  &__social {
     display: flex;
     column-gap: 16px;
     align-items: center;
-    &-icon{
+
+    &-icon {
       width: 36px;
       height: 36px;
       transition: .2s;
-      &:hover{
+
+      &:hover {
         width: 40px;
         height: 40px;
         transition: .2s;
       }
     }
   }
-  &__contact{
+
+  &__contact {
     display: flex;
     column-gap: 8px;
     align-items: center;
-    &-tel{
+
+    &-tel {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -45,8 +54,9 @@
       color: #000000;
     }
   }
-  &__submit{
-    &-btn{
+
+  &__submit {
+    &-btn {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -60,18 +70,21 @@
       border-radius: 4px;
       transition: .2s;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         background: #252525;
         transition: .2s;
       }
     }
   }
-  &__navbar{
+
+  &__navbar {
     display: flex;
     justify-content: space-between;
     margin-top: 31px;
     margin-bottom: 70px;
-    &-list{
+
+    &-list {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -84,37 +97,55 @@
       border-radius: 28px;
       transition: .2s;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         color: #787878;
         transition: .2s;
       }
     }
   }
 }
-.footer{
+
+.footer {
   background: #000000;
   padding-top: 50px;
   margin-top: 128px;
-  &__container{}
-  &__form{
+
+  &__container {
+  }
+
+  &__form {
     margin-bottom: 128px;
-    &-toggle{
+
+    &-answer {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: #A8A8A8;
+    }
+
+    &-toggle {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 36px 0;
     }
-    &-list{
+
+    &-list {
       border-bottom: 1px solid #4A4A4A;
       border-top: 1px solid #4A4A4A;
     }
-    &-list1{
+
+    &-list1 {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 30px;
     }
-    &-questions{
+
+    &-questions {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -122,7 +153,8 @@
       line-height: 51px;
       color: #FFFFFF;
     }
-    &-title{
+
+    &-title {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -130,7 +162,8 @@
       line-height: 40px;
       color: #FFFFFF;
     }
-    &-subtitle{
+
+    &-subtitle {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -138,7 +171,8 @@
       line-height: 22px;
       color: #787878;
     }
-    &-plus{
+
+    &-plus {
       color: #FFFFFF;
       font-size: 30px;
       cursor: pointer;
@@ -149,19 +183,24 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      &:hover{
+
+      &:hover {
         background: rgba(242, 242, 242, 0.12);
         transition: .2s;
       }
     }
   }
-  &__questions{
+
+  &__questions {
     background-color: #ffffff;
     padding: 64px 64px 50px 64px;
     display: flex;
     justify-content: space-between;
-    &-item{}
-    &-title{
+
+    &-item {
+    }
+
+    &-title {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -170,21 +209,16 @@
       color: #000000;
       margin-bottom: 14px;
     }
-    &-subtitle{
-      font-family: Inter, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 32px;
-      color: #000000;
-      margin-bottom: 32px;
-    }
-    &-block{
+
+    &-block {
       display: flex;
       align-items: center;
       column-gap: 19px;
-      &_avatar{}
-      &_text{
+
+      &_avatar {
+      }
+
+      &_text {
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -193,8 +227,9 @@
         color: #787878;
       }
     }
-    &-form{
-      &_title{
+
+    &-form {
+      &_title {
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -204,13 +239,15 @@
         color: #000000;
         margin-bottom: 11px;
       }
-      &_input{
+
+      &_input {
         width: 312px;
         background: #F2F2F2;
         border-radius: 4px;
         padding: 17px 0 17px 19px;
         margin-bottom: 31px;
-        &::placeholder{
+
+        &::placeholder {
           font-family: Inter, sans-serif;
           font-style: normal;
           font-weight: normal;
@@ -220,13 +257,15 @@
           color: #A8A8A8;
         }
       }
-      &_tel{
+
+      &_tel {
         width: 312px;
         background: #F2F2F2;
         border-radius: 4px;
         padding: 17px 0 17px 19px;
         margin-bottom: 31px;
-        &::placeholder{
+
+        &::placeholder {
           font-family: Inter, sans-serif;
           font-style: normal;
           font-weight: normal;
@@ -236,7 +275,8 @@
           color: #A8A8A8;
         }
       }
-      &_text{
+
+      &_text {
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -245,12 +285,14 @@
         color: #787878;
       }
     }
-    &-operator{
-      &_block{
+
+    &-operator {
+      &_block {
         display: flex;
         flex-direction: column;
       }
-      &_title{
+
+      &_title {
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -260,7 +302,8 @@
         color: #000000;
         margin-bottom: 11px;
       }
-      &_text{
+
+      &_text {
         width: 343px;
         height: 176px;
         background: #F2F2F2;
@@ -269,7 +312,8 @@
         padding: 17px 0 17px 19px;
         margin-bottom: 29px;
       }
-      &_btn{
+
+      &_btn {
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -283,22 +327,28 @@
         border-radius: 4px;
         cursor: pointer;
         transition: .2s;
-        &:hover{
+
+        &:hover {
           background: #252525;
           transition: .2s;
         }
       }
     }
   }
-  &__basement{
+
+  &__basement {
     display: flex;
     padding: 100px 0 37px 0;
     column-gap: 89px;
-    &-logo{
+
+    &-logo {
       margin-bottom: 19px;
     }
-    &-col{}
-    &-program{
+
+    &-col {
+    }
+
+    &-program {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -307,7 +357,8 @@
       color: #787878;
       margin-bottom: 36px;
     }
-    &-agreement{
+
+    &-agreement {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -316,7 +367,8 @@
       color: #FFFFFF;
       border-bottom: 1px solid #DFDFDE60;
     }
-    &-title{
+
+    &-title {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -327,7 +379,8 @@
       margin-bottom: 34px;
       cursor: pointer;
     }
-    &-tel{
+
+    &-tel {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -338,7 +391,8 @@
       margin-bottom: 13px;
       cursor: pointer;
     }
-    &-workTime{
+
+    &-workTime {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -347,27 +401,32 @@
       color: #FFFFFF;
       margin-bottom: 75px;
     }
-    &-icon{
+
+    &-icon {
       display: flex;
       column-gap: 16px;
       align-items: center;
-      img{
+
+      img {
         cursor: pointer;
       }
     }
   }
-  &__selection{
+
+  &__selection {
     display: flex;
     column-gap: 13px;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       background-color: #252525;
       transition: .2s;
     }
-    &-btn{
+
+    &-btn {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -376,7 +435,8 @@
       color: #FFFFFF;
       transition: .2s;
     }
-    &-circle{
+
+    &-circle {
       width: 8px;
       height: 8px;
       background-color: #00D15D;
@@ -386,22 +446,24 @@
 }
 
 
-.content{
+.content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0,1,0,1);
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
+
 .content.show {
   height: auto;
   max-height: 9999px;
-  transition: all 0.5s cubic-bezier(1,0,1,0);
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
 
-.plus{
+.plus {
   width: 50px;
   height: 50px;
   position: relative;
-  &::before{
+
+  &::before {
     content: '';
     width: 50%;
     height: 2px;
@@ -409,7 +471,8 @@
     position: absolute;
     transition: .3s;
   }
-  &::after{
+
+  &::after {
     content: '';
     transform: rotate(90deg);
     width: 50%;
@@ -419,26 +482,29 @@
     transition: .3s;
   }
 }
-.eks{
+
+.eks {
   width: 50px;
   height: 50px;
   position: relative;
-  &::before{
+
+  &::before {
     content: '';
     width: 50%;
     height: 2px;
     transform: rotate(45deg);
     background-color: #ffffff;
     position: absolute;
-    transition: .5s;
+    transition: .2s;
   }
-  &::after{
+
+  &::after {
     content: '';
     transform: rotate(-45deg);
     width: 50%;
     height: 2px;
     background-color: #ffffff;
     position: absolute;
-    transition: .5s;
+    transition: .2s;
   }
 }

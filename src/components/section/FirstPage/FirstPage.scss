@@ -108,7 +108,14 @@
           color: #FFFFFF;
           transition: .2s;
         }
+        &-active{
+          color: #ffffff;
+        }
       }
+    }
+    &-block{
+      display: flex;
+      justify-content: center;
     }
     &-btn{
       background: #252525;

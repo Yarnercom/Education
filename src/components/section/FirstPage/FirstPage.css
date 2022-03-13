@@ -109,6 +109,13 @@
   color: #FFFFFF;
   transition: 0.2s;
 }
+.firstPage__order-navbar_list-active {
+  color: #ffffff;
+}
+.firstPage__order-block {
+  display: flex;
+  justify-content: center;
+}
 .firstPage__order-btn {
   background: #252525;
   border-radius: 4px;

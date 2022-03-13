@@ -42,6 +42,7 @@ const Footer = () => {
     ];
 
 
+
     return (
         <footer className='footer'>
             <div className='container'>
@@ -58,9 +59,8 @@ const Footer = () => {
                                         <div className='footer__form-toggle' onClick={()=> toggle(i)}>
                                             <h3 className='footer__form-title'>{item.question}</h3>
                                             <span className={`${select === i ? 'eks' : 'plus'} footer__form-plus`}> </span>
-                                            {/*{select === i ? '-' : '+'}*/}
                                         </div>
-                                        <div className={`${select === i ? 'content show' : 'content'} footer__form-subtitle`}>{item.answer}</div>
+                                        <div className={`${select === i ? 'content show' : 'content'} footer__form-answer`}>{item.answer}</div>
                                     </div>
                                 ))
                             }

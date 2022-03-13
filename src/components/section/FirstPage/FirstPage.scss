@@ -130,7 +130,12 @@
       color: #4A4A4A;
       padding: 14px 78px;
       margin-top: 57px;
-      cursor: pointer;
+      &_active{
+        background-color: #2400FF;
+        cursor: pointer;
+        color: #ffffff;
+        transition: .2s;
+      }
     }
   }
 }

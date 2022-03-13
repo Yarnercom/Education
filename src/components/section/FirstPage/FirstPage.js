@@ -7,27 +7,53 @@ const FirstPage = () => {
 
     const [choose, setChoose] = useState('');
 
-    const data = [
+    const step1 = [
         {
+            id: 0,
             title: '9 классов'
         },
         {
+            id: 1,
             title: '11 классов'
         },
         {
+            id: 2,
             title: 'Училище'
         },
         {
+            id: 3,
             title: 'Колледж'
         },
         {
+            id: 4,
             title: 'Техникум'
         },
         {
+            id: 5,
             title: 'Неоконченное высшее'
         },
         {
+            id: 6,
             title: 'Высшее'
+        }
+    ];
+
+    const step2 = [
+        {
+            id: 0,
+            title: 'Я не знаю'
+        },
+        {
+            id: 1,
+            title: 'Гуманитарная'
+        },
+        {
+            id: 2,
+            title: 'Техническая'
+        },
+        {
+            id: 3,
+            title: 'Педагогическая'
         }
     ];
 
@@ -56,20 +82,14 @@ const FirstPage = () => {
                         <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
                         <ul className='firstPage__order-navbar'>
                             {
-                                data.map((item) => (
-                                    <li className={`${choose === 'first' ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
-                                        onClick={() => setChoose('first')}>{item.title}</li>
+                                step1.map((item) => (
+                                    <li key={item.id} className={`${choose === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
+                                        onClick={() => setChoose(item.id)}>{item.title}</li>
                                 ))
                             }
-                            {/*<li className='firstPage__order-navbar_list'>11 классов</li>*/}
-                            {/*<li className='firstPage__order-navbar_list'>Училище</li>*/}
-                            {/*<li className='firstPage__order-navbar_list'>Колледж</li>*/}
-                            {/*<li className='firstPage__order-navbar_list'>Техникум</li>*/}
-                            {/*<li className='firstPage__order-navbar_list'>Неоконченное высшее</li>*/}
-                            {/*<li className='firstPage__order-navbar_list'>Высшее</li>*/}
                         </ul>
                         <div className='firstPage__order-block'>
-                            <button className='firstPage__order-btn' type='button'>К шагу 2 из 3</button>
+                            <button className={`${choose !== '' ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} type='button'>К шагу 2 из 3</button>
                         </div>
                     </div>
                 </div>

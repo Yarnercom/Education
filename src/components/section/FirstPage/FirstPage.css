@@ -129,7 +129,12 @@
   color: #4A4A4A;
   padding: 14px 78px;
   margin-top: 57px;
+}
+.firstPage__order-btn_active {
+  background-color: #2400FF;
   cursor: pointer;
+  color: #ffffff;
+  transition: 0.2s;
 }
 
 /*# sourceMappingURL=FirstPage.css.map */

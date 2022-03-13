@@ -13,27 +13,30 @@ import {Slider} from "@mui/material";
 const Direction = () => {
 
 
-    const [val, setVal] = useState([1, 100]);
+    const [val, setVal] = useState([1]);
 
     const updateRange = (e,data) =>{
-        setVal(data)
+        setVal(data);
     };
 
 
 
-    const [search, setSearch] = useState(false);
+    const [search, setSearch] = useState("");
+
+    const [search1, setSearch1] = useState("");
 
     const [all, setAll] = useState([]);
 
-    const searchHandler = (text) =>{
-        if (text) {
-            axios('http://localhost:8080/all')
-                .then(({data}) => setAll(Object.values(data).reduce((acc, rec) => {
-                    return [...acc, rec.filter((item) => item.title.toUpperCase().toLowerCase().startsWith(text))]
-                }, []).flat()))
-        }else {
-            setAll([])
-        }
+    useEffect(()=>{
+        axios('http://localhost:8080/all')
+            .then(({data}) => setAll(Object.values(data)))
+    }, []);
+
+
+
+    const searchHandler = (e) =>{
+        setSearch(search1);
+        e.preventDefault();
     };
 
     return (
@@ -62,15 +65,13 @@ const Direction = () => {
                                   <div className='direction__filter'>
                                       <div className='line'> </div>
                                       <div className='direction__box1'>
-                                          <form className='direction__form'>
+                                          <form className='direction__form' onSubmit={(e)=> searchHandler(e)}>
                                               <label className='direction__label'>
                                                   <img className='direction__search' src={Search} alt="search"/>
-                                                  <input className='direction__input' placeholder='Поиск по направлениям'
+                                                  <input onChange={(e)=> setSearch1(e.target.value)} className='direction__input' placeholder='Поиск по направлениям'
                                                          type="text"
                                                          name='search'
-                                                         onChange={(e)=> searchHandler(e.target.value)}
                                                   />
-                                                  <button type='button' onClick={()=> setSearch(!search)}>icon</button>
                                               </label>
                                               <div className='direction__switch'>
                                                   <input className="switch" id="switch1" type="checkbox"/>
@@ -126,7 +127,9 @@ const Direction = () => {
                                               <form>
                                                   <h2>Длительность обучения</h2>
                                                   <label className='slider'>
-                                                      <p>1 год — 5 лет</p>
+                                                      <p>{
+                                                          val
+                                                      } год — 5 лет</p>
                                                       <Slider value={val} onChange={updateRange}/>
                                                   </label>
 
@@ -143,7 +146,7 @@ const Direction = () => {
                                   <div className='direction__content'>
                                       <ul className='direction__content-card' style={{display: `${search && all.length ? 'inline-block': 'none'}`}}>
                                           {
-                                              all.map((item, idx)=>(
+                                              all.filter((el)=>el.title.toLowerCase().includes(search.toLowerCase())).map((item, idx)=>(
                                                   <li key={idx} className='direction__content-card_item'>
                                                       <div className='directions__cards-list economy'>
                                                           <p className='directions__cards-title'>{item.title}</p>

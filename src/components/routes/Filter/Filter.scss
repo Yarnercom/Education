@@ -1,24 +1,5 @@
 .direction{
-  margin-top: 102px;
   &__container{}
-  &__title{
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 55px;
-    line-height: 60px;
-    color: #000000;
-    margin-bottom: 14px;
-  }
-  &__subtitle{
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
-    color: #000000;
-    margin-bottom: 40px;
-  }
   &__navbar {
     display: flex;
     column-gap: 70px;

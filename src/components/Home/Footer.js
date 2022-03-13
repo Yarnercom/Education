@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Home.css'
 import Avatar from './../../assets/avatar/avatar.svg'
 import Vk from './../../assets/icon/vk.svg'
@@ -6,35 +6,64 @@ import Inst from './../../assets/icon/instagram.svg'
 import Whats from './../../assets/icon/whatsapp.svg'
 import Logo from './../../assets/logo/desktop.svg'
 
+
 const Footer = () => {
+
+    const [select, setSelect] = useState(null);
+
+    const toggle = (i) => {
+        if (select === i) {
+            return setSelect(null)
+        }
+
+        setSelect(i)
+    };
+
+
+    const data = [
+        {
+            question: 'Где учиться по удаленной специальности?',
+            answer: 'Зачеты и экзамены проходят в виде тестов внутри электронного кабинета по расписанию. Тесты открытые, закрытые, с вариантами, иногда нужно решить задачу или написать эссе. Есть три попытки, можно выбрать лучший результат. Время каждой попытки ограничено, обычно от 30 до 45 минут на тест.'
+        },
+        {
+            question: 'Как проходит дистанционное обучение?',
+            answer: 'Зачеты и экзамены проходят в виде тестов внутри электронного кабинета по расписанию. Тесты открытые, закрытые, с вариантами, иногда нужно решить задачу или написать эссе. Есть три попытки, можно выбрать лучший результат. Время каждой попытки ограничено, обычно от 30 до 45 минут на тест.'
+        },
+        {
+            question: 'Какой документ об образовании выдается после\n' +
+                '                                дистанционной учебы\n' +
+                '                                в колледже или вузе?',
+            answer: 'Зачеты и экзамены проходят в виде тестов внутри электронного кабинета по расписанию. Тесты открытые, закрытые, с вариантами, иногда нужно решить задачу или написать эссе. Есть три попытки, можно выбрать лучший результат. Время каждой попытки ограничено, обычно от 30 до 45 минут на тест.'
+        },
+        {
+            question: 'Я решил поступать. Что дальше делать?',
+            answer: 'Зачеты и экзамены проходят в виде тестов внутри электронного кабинета по расписанию. Тесты открытые, закрытые, с вариантами, иногда нужно решить задачу или написать эссе. Есть три попытки, можно выбрать лучший результат. Время каждой попытки ограничено, обычно от 30 до 45 минут на тест.'
+        }
+    ];
+
+
     return (
         <footer className='footer'>
             <div className='container'>
                 <div className='footer__container'>
                     <div className='footer__form'>
-                        <div className='footer__form-list'>
+                        <div className='footer__form-list1'>
                             <h3 className='footer__form-questions'>Вопрос-ответ:</h3>
                             <p className='footer__form-subtitle'>Мы отобрали вопросы, которые задают <br/> нашим
                                 менеджерам каждый день </p>
                         </div>
-                        <div className='footer__form-list'>
-                            <h3 className='footer__form-title'>Где учиться по удаленной специальности?</h3>
-                            <p className='footer__form-plus'>+</p>
-                        </div>
-                        <div className='footer__form-list'>
-                            <h3 className='footer__form-title'>Как проходит дистанционное обучение?</h3>
-                            <p className='footer__form-plus'>+</p>
-                        </div>
-                        <div className='footer__form-list'>
-                            <h3 className='footer__form-title'>Какой документ об образовании выдается после
-                                дистанционной учебы <br/>
-                                в колледже или вузе?</h3>
-                            <p className='footer__form-plus'>+</p>
-                        </div>
-                        <div className='footer__form-list'>
-                            <h3 className='footer__form-title'>Я решил поступать. Что дальше делать?</h3>
-                            <p className='footer__form-plus'>+</p>
-                        </div>
+                            {
+                                data.map((item, i)=>(
+                                    <div className='footer__form-list'>
+                                        <div className='footer__form-toggle' onClick={()=> toggle(i)}>
+                                            <h3 className='footer__form-title'>{item.question}</h3>
+                                            <span className={`${select === i ? 'eks' : 'plus'} footer__form-plus`}> </span>
+                                            {/*{select === i ? '-' : '+'}*/}
+                                        </div>
+                                        <div className={`${select === i ? 'content show' : 'content'} footer__form-subtitle`}>{item.answer}</div>
+                                    </div>
+                                ))
+                            }
                     </div>
 
                     <div className='footer__questions'>
@@ -55,14 +84,17 @@ const Footer = () => {
                                 <p className='footer__questions-form_title'>Как Вас зовут?</p>
                                 <input placeholder='Иванов Иван' className='footer__questions-form_input' type="text"/>
                                 <p className='footer__questions-form_title'>Ваш телефон</p>
-                                <input placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel' type="tel"/>
+                                <input placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
+                                       type="tel"/>
                             </label>
-                            <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”, Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
+                            <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
+                                Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
                         </form>
                         <div className='footer__questions-operator'>
                             <label className='footer__questions-operator_block'>
                                 <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
-                                <textarea className='footer__questions-operator_text' placeholder='Вы можете задать несколько вопросов'>
+                                <textarea className='footer__questions-operator_text'
+                                          placeholder='Вы можете задать несколько вопросов'>
 
                                 </textarea>
                                 <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
@@ -73,7 +105,8 @@ const Footer = () => {
                     <div className='footer__basement'>
                         <div className='footer__basement-col'>
                             <img className='footer__basement-logo' src={Logo} alt="logo"/>
-                            <p className='footer__basement-program'>Единая приёмная комиссия вузов <br/> и колледжей по дистанционным <br/>
+                            <p className='footer__basement-program'>Единая приёмная комиссия вузов <br/> и колледжей по
+                                дистанционным <br/>
                                 программам</p>
                             <p className='footer__basement-agreement'>Политика конфиденциальности</p>
                         </div>
@@ -110,9 +143,10 @@ const Footer = () => {
             </div>
             <div className='footer__selection'>
                 <p className='footer__selection-btn'>Подобрать обучение</p>
-                <div className='footer__selection-circle'> </div>
+                <div className='footer__selection-circle'></div>
             </div>
         </footer>
+
     );
 };
 

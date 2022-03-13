@@ -1,60 +1,39 @@
 import React, {useState} from 'react';
 import './Directions.css'
 import Arrow from './../../../assets/icon/Vector.svg'
-import {NavLink, Routes, Route} from 'react-router-dom'
-import Showeucation from "../../Content/Showeucation";
 import Average from "../../routes/Average";
 import Higher from "../../routes/Higher";
-import Tourism from "../../../assets/direction/Туризм.svg";
-import Jurisprudence from "../../../assets/direction/юриспруденция.svg";
-import Economy from "../../../assets/direction/экономика.svg";
-import Journalism from "../../../assets/direction/Журналистика.svg";
-import Medical from "../../../assets/direction/Медицинская оптика.svg";
-import Public from "../../../assets/direction/Реклама и связи с общественностью.svg";
 import Ape from "../../routes/Ape";
-// import {CSSTransition} from 'react-transition-group'
 
 
 const Directions = () => {
 
-    // const higher = [
-    //     <Higher/>
-    // ];
-    // const average = [
-    //     <Average/>
-    // ];
-    // const ape = [
-    //     <Ape/>
-    // ];
-    //
-    // const [active, setActive] = useState([
-    //     higher
-    // ]);
-    // const [show, setShow] = useState(true);
 
-    const [content, setContent] = useState('first');
+    const [content, setContent] = useState('higher');
+
+
     return (
         <section className='directions'>
             <div className='container'>
                 <div className='directions__container'>
                     <h2 className='directions__title'>Направления</h2>
                     <ul className='directions__navbar'>
-                        <p onClick={() => setContent('first')} className='directions__navbar-list'>
+                        <p onClick={() => setContent('higher')} className={`${content === 'higher' ? 'active' : ''} directions__navbar-list`}>
                             Высшее<sup className='sup'>14</sup>
                         </p>
-                        <p onClick={() => setContent('second')} className='directions__navbar-list'>
+                        <p onClick={() => setContent('average')} className={`${content === 'average' ? 'active' : ''} directions__navbar-list`}>
                             Среднее <sup className='sup'>9</sup>
                         </p>
-                        <p onClick={() => setContent('third')} className={`${content === 'third' ? 'active' : ''} directions__navbar-list`}>
+                        <p onClick={() => setContent('ape')} className={`${content === 'ape' ? 'active' : ''} directions__navbar-list`}>
                             ДПО <sup className='sup'>36</sup>
                         </p>
                     </ul>
                     <div className='line'></div>
 
                     {
-                        content === 'first' ? <Higher/>
-                            : content === 'second' ? <Average/>
-                            : content === 'third' ? <Ape/>
+                        content === 'higher' ? <Higher/>
+                            : content === 'average' ? <Average/>
+                            : content === 'ape' ? <Ape/>
                                 : ''
                     }
                     <div className='directions__showMore'>

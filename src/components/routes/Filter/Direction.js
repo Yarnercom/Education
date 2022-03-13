@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import {NavLink, useSearchParams} from "react-router-dom";
 import './../../section/Directions/Directions.css'
 import './Filter.css'
+import './general.css'
 import './../Routes.css'
 import Search from '../../../assets/icon/search.svg'
 import './../switch/switch.css'
@@ -44,9 +45,9 @@ const Direction = () => {
             <div className='direction'>
                 <div className='container'>
                     <div className='direction__container'>
-                        <h2 className='direction__title'>Направления онлайн образования <br/>
+                        <h2 className='general__title'>Направления онлайн образования <br/>
                             в Санкт-Петербурге</h2>
-                        <p className='direction__subtitle'>Мы сотрудничаем с 10 престижными колледжами по программам дистанционного онлайн-обучения.</p>
+                        <p className='general__subtitle'>Мы сотрудничаем с 10 престижными колледжами по программам дистанционного онлайн-обучения.</p>
 
                         <ul className='direction__navbar'>
                             <NavLink to='/filter' className='direction__navbar-list'>
@@ -59,11 +60,11 @@ const Direction = () => {
                                 ДПО <sup className='sup'>36</sup>
                             </NavLink>
                         </ul>
+                        <div className='line'> </div>
 
 
                               <div className='direction__flex'>
                                   <div className='direction__filter'>
-                                      <div className='line'> </div>
                                       <div className='direction__box1'>
                                           <form className='direction__form' onSubmit={(e)=> searchHandler(e)}>
                                               <label className='direction__label'>

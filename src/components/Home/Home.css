@@ -66,6 +66,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+  margin-bottom: 70px;
 }
 .header__navbar-list {
   font-family: Inter, sans-serif;
@@ -94,12 +95,21 @@
 .footer__form {
   margin-bottom: 128px;
 }
-.footer__form-list {
+.footer__form-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 36px 0;
+}
+.footer__form-list {
   border-bottom: 1px solid #4A4A4A;
+  border-top: 1px solid #4A4A4A;
+}
+.footer__form-list1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 .footer__form-questions {
   font-family: Inter, sans-serif;
@@ -361,6 +371,65 @@
   height: 8px;
   background-color: #00D15D;
   border-radius: 50%;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.plus {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.plus::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: 0.3s;
+}
+.plus::after {
+  content: "";
+  transform: rotate(90deg);
+  width: 50%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.eks {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.eks::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  position: absolute;
+  transition: 0.5s;
+}
+.eks::after {
+  content: "";
+  transform: rotate(-45deg);
+  width: 50%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=Home.css.map */

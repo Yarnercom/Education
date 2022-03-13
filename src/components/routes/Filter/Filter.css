@@ -1,25 +1,4 @@
 @charset "UTF-8";
-.direction {
-  margin-top: 102px;
-}
-.direction__title {
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 55px;
-  line-height: 60px;
-  color: #000000;
-  margin-bottom: 14px;
-}
-.direction__subtitle {
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 32px;
-  color: #000000;
-  margin-bottom: 40px;
-}
 .direction__navbar {
   display: flex;
   column-gap: 70px;

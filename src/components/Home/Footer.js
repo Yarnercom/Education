@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useForm} from 'react-hook-form'
 import './Home.css'
 import Avatar from './../../assets/avatar/avatar.svg'
 import Vk from './../../assets/icon/vk.svg'
@@ -9,6 +10,24 @@ import Logo from './../../assets/logo/desktop.svg'
 
 const Footer = () => {
 
+
+    const {
+        register,
+        formState: {
+            errors,
+        },
+        handleSubmit,
+        reset,
+    } = useForm({
+        mode: "onBlur"
+    });
+
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data));
+        reset();
+    };
+
+
     const [select, setSelect] = useState('');
 
     const toggle = (i) => {
@@ -18,7 +37,6 @@ const Footer = () => {
 
         setSelect(i)
     };
-
 
     const data = [
         {
@@ -79,27 +97,53 @@ const Footer = () => {
                                     Ваш <br/> персональный менеджер</p>
                             </div>
                         </div>
-                        <form className='footer__questions-form'>
-                            <label>
-                                <p className='footer__questions-form_title'>Как Вас зовут?</p>
-                                <input placeholder='Иванов Иван' className='footer__questions-form_input' type="text"/>
-                                <p className='footer__questions-form_title'>Ваш телефон</p>
-                                <input placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
-                                       type="tel"/>
-                            </label>
-                            <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
-                                Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
-                        </form>
-                        <div className='footer__questions-operator'>
-                            <label className='footer__questions-operator_block'>
-                                <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
-                                <textarea className='footer__questions-operator_text'
-                                          placeholder='Вы можете задать несколько вопросов'>
 
+ {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                        <form className='footer__questions-form' onSubmit={handleSubmit(onSubmit)}>
+                            <div>
+                                <label>
+
+ {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                    <p className='footer__questions-form_title'>Как Вас зовут?</p>
+                                    <input placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
+                                           {...register('firstName', {
+                                               required: "Поле обязательно к заполнению",
+                                               maxLength: {
+                                                   value: 20,
+                                                   message: 'максимум 20 символов!'
+                                               }
+                                           })}
+                                    />
+                                    <div style={{height: 40}}>{errors?.firstName && <p>{errors?.firstName?.message || "Error!"}</p>}</div>
+ {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+
+                                    <p className='footer__questions-form_title'>Ваш телефон</p>
+                                    <input placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
+                                           type="tel"
+                                           {...register('tel', {
+                                               required: "Поле обязательно к заполнению",
+                                           })}
+                                    />
+                                    <div style={{height: 40}}>{errors?.tel && <p>{errors?.tel?.message || "Error!"}</p>}</div>
+{/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+
+                                </label>
+                                <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
+                                    Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
+                            </div>
+                            <div className='footer__questions-operator'>
+                                <label className='footer__questions-operator_block'>
+                                    <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
+                                    <textarea className='footer__questions-operator_text'
+                                              placeholder='Вы можете задать несколько вопросов'>
+ {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
                                 </textarea>
-                                <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
-                            </label>
-                        </div>
+                                    <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
+                                </label>
+                            </div>
+                        </form>
+
+ {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
                     </div>
 
                     <div className='footer__basement'>
@@ -141,6 +185,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
             <div className='footer__selection'>
                 <p className='footer__selection-btn'>Подобрать обучение</p>
                 <div className='footer__selection-circle'> </div>

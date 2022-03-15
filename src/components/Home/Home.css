@@ -195,6 +195,10 @@
   line-height: 22px;
   color: #787878;
 }
+.footer__questions-form {
+  display: flex;
+  column-gap: 72px;
+}
 .footer__questions-form_title {
   font-family: Inter, sans-serif;
   font-style: normal;

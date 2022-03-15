@@ -13,7 +13,7 @@
     ,
     "Jurisprudence":
       {
-        "id": 0,
+        "id": 1,
         "title": "Юриспруденция",
         "price": 10500,
         "magistracy": 13000,
@@ -24,7 +24,7 @@
     ,
     "Journalism":
       {
-        "id": 0,
+        "id": 2,
         "title": "Журналистика",
         "price": 10500,
         "magistracy": 13000,
@@ -35,7 +35,7 @@
     ,
     "MedicalOptics":
       {
-        "id": 0,
+        "id": 3,
         "title": "Медицинская оптика",
         "price": 10500,
         "magistracy": 13000,
@@ -46,7 +46,7 @@
     ,
     "TradingBusiness":
       {
-        "id": 0,
+        "id": 4,
         "title": "Торговое дело",
         "price": 10500,
         "magistracy": 13000,
@@ -57,7 +57,7 @@
     ,
     "FireSafety":
       {
-        "id": 0,
+        "id": 5,
         "title": "Пожарная безопасность",
         "price": 10500,
         "magistracy": 13000,
@@ -68,7 +68,7 @@
     ,
     "LandAndPropertyRelations":
       {
-        "id": 0,
+        "id": 6,
         "title": "Земельно-имущественные отношения",
         "price": 10500,
         "magistracy": 13000,
@@ -79,7 +79,7 @@
     ,
     "HotelBusiness":
       {
-        "id": 0,
+        "id": 7,
         "title": "Гостиничное дело",
         "price": 10500,
         "magistracy": 13000,
@@ -88,6 +88,44 @@
         "onlineProtection": true
       }
 
+  },
+  "universities": {
+    "MoscowInternationalUniversity": {
+      "id": 8,
+      "title": "Московский Международный  Университет",
+      "price": 12500,
+      "onlineProtection": true
+    },
+    "MoscowInternationalAcademy": {
+      "id": 9,
+      "title": "Московская международная  академия",
+      "price": 12500,
+      "onlineProtection": true
+    },
+    "MoscowEconomicInstitute": {
+      "id": 10,
+      "title": "Московский экономический институт",
+      "price": 12500,
+      "onlineProtection": true
+    },
+    "KurskInstituteOfManagementEconomicsAndBusiness": {
+      "id": 11,
+      "title": "Курский институт  менеджмента, экономики и бизнеса",
+      "price": 12500,
+      "onlineProtection": true
+    },
+    "MoscowUniversityNamedAfterS.Yu.Witte": {
+      "id": 12,
+      "title": "Московский университет им.С.Ю. Витте",
+      "price": 12500,
+      "onlineProtection": true
+    },
+    "TulaStateUniversity": {
+      "id": 13,
+      "title": "Тульский государственный университет",
+      "price": 12500,
+      "onlineProtection": true
+    }
   },
   "average": {
 

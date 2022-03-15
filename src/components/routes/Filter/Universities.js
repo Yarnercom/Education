@@ -13,7 +13,7 @@ const Universities = () => {
     const [all, setAll] = useState([]);
 
     useEffect(()=>{
-        axios('http://localhost:8080/all')
+        axios('http://localhost:8080/universities')
             .then(({data}) => setAll(Object.values(data)))
     }, []);
 
@@ -41,19 +41,13 @@ const Universities = () => {
                                type="text"
                                name='search'
                         />
+                        <p className='universities__total'>Всего 24 вуза</p>
                     </label>
                 </form>
                 <ul className='direction__content-card' style={{display: `${search && all.length ? 'inline-block': 'none'}`}}>
                     {
                         all.filter((el)=>el.title.toLowerCase().includes(search.toLowerCase())).map((item, idx)=>(
                             <li key={idx} className='direction__content-card_item'>
-                                <div className='directions__cards-list economy'>
-                                    <p className='directions__cards-title'>{item.title}</p>
-                                    <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>
-                                    <p className='directions__cards-subtitle'>• от 2,5 лет</p>
-                                    <img className='directions__cards-img' src={Economy} alt="Economy"/>
-                                    <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
-                                </div>
                                 <div className='directions__cards-list economy'>
                                     <p className='directions__cards-title'>{item.title}</p>
                                     <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>

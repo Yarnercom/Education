@@ -9,11 +9,11 @@ import Logo from './../../assets/logo/desktop.svg'
 
 const Footer = () => {
 
-    const [select, setSelect] = useState(null);
+    const [select, setSelect] = useState('');
 
     const toggle = (i) => {
         if (select === i) {
-            return setSelect(null)
+            return setSelect('')
         }
 
         setSelect(i)
@@ -143,7 +143,7 @@ const Footer = () => {
             </div>
             <div className='footer__selection'>
                 <p className='footer__selection-btn'>Подобрать обучение</p>
-                <div className='footer__selection-circle'></div>
+                <div className='footer__selection-circle'> </div>
             </div>
         </footer>
 

@@ -38,6 +38,9 @@ const FirstPage = () => {
         }
     ];
 
+
+    const [choose1, setChoose1] = useState('');
+
     const step2 = [
         {
             id: 0,
@@ -56,6 +59,7 @@ const FirstPage = () => {
             title: 'Педагогическая'
         }
     ];
+
 
 
     return (
@@ -83,13 +87,20 @@ const FirstPage = () => {
                         <ul className='firstPage__order-navbar'>
                             {
                                 step1.map((item) => (
-                                    <li key={item.id} className={`${choose === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
+                                    <li key={item.id}
+                                        className={`${choose === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
                                         onClick={() => setChoose(item.id)}>{item.title}</li>
                                 ))
                             }
+                                {/*{*/}
+                                {/*    step2.map((item) =>(*/}
+                                {/*    <li key={item.id} className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}*/}
+                                {/*    onClick={()=> setChoose1(item.id)}>{item.title}</li>*/}
+                                {/*    ))*/}
+                                {/*}*/}
                         </ul>
                         <div className='firstPage__order-block'>
-                            <button className={`${choose !== '' ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} type='button'>К шагу 2 из 3</button>
+                            <button onClick={()=> setChoose(choose)} className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} type='button'>К шагу 2 из 3</button>
                         </div>
                     </div>
                 </div>

@@ -156,13 +156,6 @@ const Direction = () => {
                                                           <img className='directions__cards-img' src={Economy} alt="Economy"/>
                                                           <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
                                                       </div>
-                                                      <div className='directions__cards-list economy'>
-                                                          <p className='directions__cards-title'>{item.title}</p>
-                                                          <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>
-                                                          <p className='directions__cards-subtitle'>• от 2,5 лет</p>
-                                                          <img className='directions__cards-img' src={Economy} alt="Economy"/>
-                                                          <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
-                                                      </div>
                                                   </li>
                                               ))
                                           }

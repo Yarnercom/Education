@@ -1,0 +1,14 @@
+.input__error{
+  color: red;
+  font-size: 20px;
+}
+.form__block{
+  width: 312px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__flex{
+  display: flex;
+  column-gap: 72px;
+}

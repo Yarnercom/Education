@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form'
 import './Home.css'
+import './../allStyle.css'
 import Avatar from './../../assets/avatar/avatar.svg'
 import Vk from './../../assets/icon/vk.svg'
 import Inst from './../../assets/icon/instagram.svg'
 import Whats from './../../assets/icon/whatsapp.svg'
 import Logo from './../../assets/logo/desktop.svg'
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 
 const Footer = () => {
@@ -25,6 +28,12 @@ const Footer = () => {
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
         reset();
+    };
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
     };
 
 
@@ -60,6 +69,10 @@ const Footer = () => {
     ];
 
 
+    const getResult = async () =>{
+
+    };
+
 
     return (
         <footer className='footer'>
@@ -71,17 +84,18 @@ const Footer = () => {
                             <p className='footer__form-subtitle'>Мы отобрали вопросы, которые задают <br/> нашим
                                 менеджерам каждый день </p>
                         </div>
-                            {
-                                data.map((item, i)=>(
-                                    <div className='footer__form-list'>
-                                        <div className='footer__form-toggle' onClick={()=> toggle(i)}>
-                                            <h3 className='footer__form-title'>{item.question}</h3>
-                                            <span className={`${select === i ? 'eks' : 'plus'} footer__form-plus`}> </span>
-                                        </div>
-                                        <div className={`${select === i ? 'content show' : 'content'} footer__form-answer`}>{item.answer}</div>
+                        {
+                            data.map((item, i) => (
+                                <div className='footer__form-list'>
+                                    <div className='footer__form-toggle' onClick={() => toggle(i)}>
+                                        <h3 className='footer__form-title'>{item.question}</h3>
+                                        <span className={`${select === i ? 'eks' : 'plus'} footer__form-plus`}> </span>
                                     </div>
-                                ))
-                            }
+                                    <div
+                                        className={`${select === i ? 'content show' : 'content'} footer__form-answer`}>{item.answer}</div>
+                                </div>
+                            ))
+                        }
                     </div>
 
                     <div className='footer__questions'>
@@ -98,52 +112,90 @@ const Footer = () => {
                             </div>
                         </div>
 
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                        <form className='footer__questions-form' onSubmit={handleSubmit(onSubmit)}>
-                            <div>
-                                <label>
+                        {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                       <div>
+                           <form className='footer__questions-form' onSubmit={handleSubmit(onSubmit)}>
 
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                                    <p className='footer__questions-form_title'>Как Вас зовут?</p>
-                                    <input placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
-                                           {...register('firstName', {
-                                               required: "Поле обязательно к заполнению",
-                                               maxLength: {
-                                                   value: 20,
-                                                   message: 'максимум 20 символов!'
-                                               }
-                                           })}
-                                    />
-                                    <div style={{height: 40}}>{errors?.firstName && <p>{errors?.firstName?.message || "Error!"}</p>}</div>
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                   <Box
+                                       component="form"
+                                       sx={{
+                                           '& .MuiTextField-root': {m: 1, width: '340px'},
+                                       }}
+                                       noValidate
+                                       autoComplete="off"
+                                   >
+                                       <div className='form__flex'>
+                                           <div>
+                                               <div className='form__block'>
+                                                   <p className='footer__questions-form_title'>Как Вас зовут?</p>
+                                                   <TextField
+                                                       id="filled-multiline-flexible"
+                                                       label="Имя"
+                                                       multiline
+                                                       maxRows={10}
+                                                       onChange={handleChange}
+                                                       noValidate
+                                                       variant="filled"
+                                                       {...register('firstName', {
+                                                           required: "Поле обязательно к заполнению",
+                                                           maxLength: {
+                                                               value: 20,
+                                                               message: 'максимум 20 символов!'
+                                                           }
+                                                       })}
+                                                   />
+                                                   <div style={{height: 40}}>{errors?.firstName &&
+                                                   <p className='input__error'>{errors?.firstName?.message || "Error!"}</p>}</div>
+                                               </div>
+                                               <div className='form__block'>
+                                                   <p className='footer__questions-form_title'>Ваш телефон</p>
+                                                   <TextField
+                                                       id="filled-textarea"
+                                                       label="Номер телефона"
+                                                       multiline
+                                                       variant="filled"
+                                                       {...register('phoneNumber', {
+                                                           required: "Поле обязательно к заполнению",
+                                                           maxLength: {
+                                                               value: 10,
+                                                               message: 'Ошибка!'
+                                                           }
+                                                       })}
+                                                   />
+                                                   <div style={{height: 40}}>{errors?.phoneNumber &&
+                                                   <p className='input__error'>{errors?.phoneNumber?.message || "Error!"}</p>}</div>
+                                               </div>
+                                           </div>
+                                           <div className='form__block'>
+                                               <p className='footer__questions-form_title'>Напишите свои вопросы:</p>
+                                               <TextField
+                                                   id="filled-multiline-static"
+                                                   label="Вы можете задать несколько вопросов"
+                                                   multiline
+                                                   rows={4}
+                                                   defaultValue=""
+                                                   variant="filled"
+                                                   {...register('yourQuestions', {
+                                                       required: "Поле обязательно к заполнению",
+                                                       maxLength: {
+                                                           value: 100,
+                                                           message: 'Ошибка!'
+                                                       }
+                                                   })}
+                                               />
+                                               <div style={{height: 40}}>{errors?.yourQuestions &&
+                                               <p className='input__error'>{errors?.yourQuestions?.message || "Error!"}</p>}</div>
 
-                                    <p className='footer__questions-form_title'>Ваш телефон</p>
-                                    <input placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
-                                           type="tel"
-                                           {...register('tel', {
-                                               required: "Поле обязательно к заполнению",
-                                           })}
-                                    />
-                                    <div style={{height: 40}}>{errors?.tel && <p>{errors?.tel?.message || "Error!"}</p>}</div>
-{/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-
-                                </label>
-                                <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
-                                    Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
-                            </div>
-                            <div className='footer__questions-operator'>
-                                <label className='footer__questions-operator_block'>
-                                    <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
-                                    <textarea className='footer__questions-operator_text'
-                                              placeholder='Вы можете задать несколько вопросов'>
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                                </textarea>
-                                    <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
-                                </label>
-                            </div>
-                        </form>
-
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                               <div>
+                                                   <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
+                                                       Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </Box>
+                               <button className='footer__questions-operator_btn'>Задать вопрос</button>
+                           </form>
+                       </div>
                     </div>
 
                     <div className='footer__basement'>
@@ -188,7 +240,7 @@ const Footer = () => {
 
             <div className='footer__selection'>
                 <p className='footer__selection-btn'>Подобрать обучение</p>
-                <div className='footer__selection-circle'> </div>
+                <div className='footer__selection-circle'></div>
             </div>
         </footer>
 

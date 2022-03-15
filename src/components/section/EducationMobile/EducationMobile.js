@@ -3,7 +3,7 @@ import './EducationMobile.css'
 import {Link, Routes, Route} from 'react-router-dom'
 import Mobile from './../../../assets/card/учиться с телефна-1.png'
 import Check from './../../../assets/card/учиться с телефна.png'
-import Test from "../../Home/test";
+
 
 const EducationMobile = () => {
     return (
@@ -38,7 +38,6 @@ const EducationMobile = () => {
                 </div>
             </div>
 
-            <Test/>
 
         </section>
     );

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Search from "../../../assets/icon/search.svg";
 import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
+import Btns from "../../Home/btns/Btns";
 
 const Universities = () => {
 
@@ -28,6 +29,7 @@ const Universities = () => {
     return (
         <section className='universities'>
             <div className='container'>
+                <Btns/>
                 <h3 className='general__title'>Вузы с онлайн образованием <br/>
                     в Санкт-Петербурге
                 </h3>

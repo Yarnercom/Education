@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import {NavLink, useSearchParams} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './../../section/Directions/Directions.css'
 import './Filter.css'
 import './general.css'
@@ -10,6 +10,7 @@ import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
 
 import {Slider} from "@mui/material";
+import Btns from "../../Home/btns/Btns";
 
 const Direction = () => {
 
@@ -44,6 +45,7 @@ const Direction = () => {
         <section>
             <div className='direction'>
                 <div className='container'>
+                    <Btns/>
                     <div className='direction__container'>
                         <h2 className='general__title'>Направления онлайн образования <br/>
                             в Санкт-Петербурге</h2>

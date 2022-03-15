@@ -85,6 +85,7 @@ const FirstPage = () => {
                         </div>
                         <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
                         <ul className='firstPage__order-navbar'>
+
                             {
                                 step1.map((item) => (
                                     <li key={item.id}
@@ -92,15 +93,16 @@ const FirstPage = () => {
                                         onClick={() => setChoose(item.id)}>{item.title}</li>
                                 ))
                             }
-                                {/*{*/}
-                                {/*    step2.map((item) =>(*/}
-                                {/*    <li key={item.id} className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}*/}
-                                {/*    onClick={()=> setChoose1(item.id)}>{item.title}</li>*/}
-                                {/*    ))*/}
-                                {/*}*/}
+                            {/*{*/}
+                            {/*    step2.map((item) =>(*/}
+                            {/*        <li key={item.id} className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}*/}
+                            {/*            onClick={()=> setChoose1(item.id)}>{item.title}</li>*/}
+                            {/*    ))*/}
+                            {/*}*/}
+
                         </ul>
                         <div className='firstPage__order-block'>
-                            <button onClick={()=> setChoose(choose)} className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} type='button'>К шагу 2 из 3</button>
+                            <button className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} type='button'>К шагу 2 из 3</button>
                         </div>
                     </div>
                 </div>

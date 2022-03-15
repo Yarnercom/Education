@@ -4,11 +4,11 @@ import Instagram from './../../assets/icon/instagram.svg';
 import Wats from './../../assets/icon/whatsapp.svg';
 import Avatar from './../../assets/avatar/avatar.svg';
 import Logo from './../../assets/logo/logoFirst.png'
-import {Link} from "react-router-dom";
-import {Routes, Route} from 'react-router-dom'
+import {Link, Routes, Route} from "react-router-dom";
 import Direction from "../routes/Filter/Direction";
 import './Home.css'
 import Universities from "../routes/Filter/Universities";
+import Btns from "./btns/Btns";
 
 
 const Header = () => {

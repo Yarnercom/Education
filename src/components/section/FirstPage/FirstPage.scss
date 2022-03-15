@@ -139,3 +139,22 @@
     }
   }
 }
+
+.header__blockNav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: -3px;
+}
+.header__nav{
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  background-color: #F2F2F2;
+  color: #A8A8A8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

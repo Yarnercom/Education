@@ -28,4 +28,23 @@
   color: #000000;
 }
 
+.enroll__first {
+  background: url("./../../assets/background/enroll.png");
+  width: 800px;
+  height: 496px;
+  padding: 40px 0 0 40px;
+}
+.enroll__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 60px;
+  color: #000000;
+}
+.enroll__container {
+  display: flex;
+  column-gap: 31pxd;
+}
+
 /*# sourceMappingURL=Routes.css.map */

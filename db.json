@@ -127,7 +127,11 @@
       "onlineProtection": true
     }
   },
-  "average": {
-
+  "mainTitle": {
+    "HowToProceed-StepByStepInstructions": {
+      "id": 14,
+      "title": "Как поступить — пошаговая инструкция",
+      "image": ""
+    }
   }
 }

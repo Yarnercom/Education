@@ -1,5 +1,6 @@
 import React from 'react';
 import './EducationMobile.css'
+import {Link, Routes, Route} from 'react-router-dom'
 import Mobile from './../../../assets/card/учиться с телефна-1.png'
 import Check from './../../../assets/card/учиться с телефна.png'
 
@@ -14,7 +15,9 @@ const EducationMobile = () => {
                             нервов</h2>
                         <p className='edMob__subtitle'>Вступительные по результатам ЕГЭ или
                             онлайн-тестам. Ведём набор круглый год.</p>
-                        <button className='edMob__btn'>Схема поступления</button>
+                        <Link to='/enroll'>
+                            <button className='edMob__btn'>Схема поступления</button>
+                        </Link>
                     </div>
                     <div className='edMob__right'>
                         <img src={Check} alt="check"/>

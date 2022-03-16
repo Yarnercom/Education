@@ -1,93 +1,77 @@
 {
   "all": {
-    "economy":
-      {
-        "id": 0,
-        "title": "Экономика",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "Jurisprudence":
-      {
-        "id": 1,
-        "title": "Юриспруденция",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "Journalism":
-      {
-        "id": 2,
-        "title": "Журналистика",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "MedicalOptics":
-      {
-        "id": 3,
-        "title": "Медицинская оптика",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "TradingBusiness":
-      {
-        "id": 4,
-        "title": "Торговое дело",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "FireSafety":
-      {
-        "id": 5,
-        "title": "Пожарная безопасность",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "LandAndPropertyRelations":
-      {
-        "id": 6,
-        "title": "Земельно-имущественные отношения",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-    ,
-    "HotelBusiness":
-      {
-        "id": 7,
-        "title": "Гостиничное дело",
-        "price": 10500,
-        "magistracy": 13000,
-        "undergraduate": 12000,
-        "specialty": 11000,
-        "onlineProtection": true
-      }
-
+    "economy": {
+      "id": 0,
+      "title": "Экономика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "Jurisprudence": {
+      "id": 1,
+      "title": "Юриспруденция",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "Journalism": {
+      "id": 2,
+      "title": "Журналистика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "MedicalOptics": {
+      "id": 3,
+      "title": "Медицинская оптика",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "TradingBusiness": {
+      "id": 4,
+      "title": "Торговое дело",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "FireSafety": {
+      "id": 5,
+      "title": "Пожарная безопасность",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "LandAndPropertyRelations": {
+      "id": 6,
+      "title": "Земельно-имущественные отношения",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    },
+    "HotelBusiness": {
+      "id": 7,
+      "title": "Гостиничное дело",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true
+    }
   },
   "universities": {
     "MoscowInternationalUniversity": {
@@ -133,5 +117,19 @@
       "title": "Как поступить — пошаговая инструкция",
       "image": ""
     }
-  }
+  },
+  "review": [
+    {
+      "id": 15,
+      "name": "dawdawd",
+      "tel": 1231231231,
+      "question": "dawwwwwwwwwwwaddddddddd"
+    },
+    {
+      "name": "Erbol",
+      "tel": "99999999",
+      "question1": "dawwwwwwwwwwwwwwwwwwwwwwww",
+      "id": 16
+    }
+  ]
 }

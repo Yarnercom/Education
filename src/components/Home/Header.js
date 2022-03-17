@@ -39,38 +39,38 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                    <ul className='header__navbar'>
-                        <li>
-                            <Link className='header__navbar-list' to="/direction">Направления</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/universities">Вузы</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/collage">Колледжи</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/professions">Профессии</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/reviews">Отзывы</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/question">Вопрос-ответ</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/enroll">Как поступить</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/institutions">Учебным заведениям</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/contacts">Контакты</Link>
-                        </li>
-                        <li>
-                            <Link className='header__navbar-list' to="/more">Ещё</Link>
-                        </li>
-                    </ul>
+                <ul className='header__navbar'>
+                    <li>
+                        <Link className='header__navbar-list' to="/direction">Направления</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/universities">Вузы</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/collage">Колледжи</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/professions">Профессии</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/reviews">Отзывы</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/question">Вопрос-ответ</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/enroll">Как поступить</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/institutions">Учебным заведениям</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/contacts">Контакты</Link>
+                    </li>
+                    <li>
+                        <Link className='header__navbar-list' to="/more">Ещё</Link>
+                    </li>
+                </ul>
             </div>
             <Routes>
                 <Route path='/direction' element={<Direction/>}/>

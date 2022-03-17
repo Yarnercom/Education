@@ -7,9 +7,9 @@ const Card = () => {
 
     function goNextPage() {
         if (page === 4) return;
-        setPage((page)=> page + 1);
-        setNum((num)=> num + 1);
-        setNum1((num1)=> num1 + 1)
+        setPage((page) => page + 1);
+        setNum((num) => num + 1);
+        setNum1((num1) => num1 + 1)
     }
 
     const [num, setNum] = useState(1);
@@ -70,15 +70,15 @@ const Card = () => {
         }
     ];
 
-
+    const [disable, setDisable] = useState('on');
 
     return (
         <div>
-                <div className='firstPage__order-dFlex'>
-                    <p className='firstPage__order-title'>Подобрать обучение</p>
-                    <span className='firstPage__order-frac'>{num}/3</span>
-                </div>
-                <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
+            <div className='firstPage__order-dFlex'>
+                <p className='firstPage__order-title'>Подобрать обучение</p>
+                <span className='firstPage__order-frac'>{num}/3</span>
+            </div>
+            <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
             <ul className='firstPage__order-navbar'>
                 {page === 1 && [
                     step1.map((item) => (
@@ -88,16 +88,21 @@ const Card = () => {
                     ))
                 ]}
                 {page === 2 && [
-                        step2.map((item) =>(
-                            <li key={item.id} className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
-                                onClick={()=> setChoose1(item.id)}>{item.title}</li>
-                        ))
+                    step2.map((item) => (
+                        <li key={item.id}
+                            className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
+                            onClick={() => setChoose1(item.id)}>{item.title}</li>
+                    ))
                 ]}
             </ul>
-                <div className='firstPage__order-block'>
+            <div className='firstPage__order-block'>
 
-                    <button className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`} onClick={goNextPage} type='button'>К шагу {num1} из 3</button>
-                </div>
+                <button
+
+                    className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`}
+                        onClick={goNextPage} type='button'>К шагу {num1} из 3
+                </button>
+            </div>
         </div>
     );
 };

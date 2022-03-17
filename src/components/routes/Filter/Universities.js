@@ -3,6 +3,7 @@ import Search from "../../../assets/icon/search.svg";
 import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
 import Btns from "../../Home/btns/Btns";
+import RouteContent from "./RouteContent/RouteContent";
 
 const Universities = () => {
 
@@ -61,6 +62,7 @@ const Universities = () => {
                         ))
                     }
                 </ul>
+                <RouteContent/>
             </div>
         </section>
     );

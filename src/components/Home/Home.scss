@@ -209,7 +209,8 @@
       color: #000000;
       margin-bottom: 14px;
     }
-    &-subtitle{
+
+    &-subtitle {
       font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -239,6 +240,7 @@
     &-form {
       display: flex;
       column-gap: 72px;
+
       &_title {
         font-family: Inter, sans-serif;
         font-style: normal;
@@ -256,6 +258,7 @@
         background: #F2F2F2;
         border-radius: 4px;
         padding: 17px 0 17px 19px;
+
         &::placeholder {
           font-family: Inter, sans-serif;
           font-style: normal;
@@ -523,5 +526,3 @@
   }
 }
 
-
-.layout{}

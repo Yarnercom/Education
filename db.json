@@ -119,5 +119,28 @@
     }
   },
   "review": [
-  ]
+
+  ],
+  "routeContent1": {
+    "EducationalPsychologist": {
+      "title": "Прямо сейчас в Санкт-Петербурге ищут:",
+      "link": "Данные взяты с портала Rabota.ru и являются ознакомительными",
+      "subtitle": "Педагог-психолог",
+      "fromPrice": 40000,
+      "beforePrice": 50000,
+      "symbol": "ЧОУ ДО Центр развития Егоза"
+    },
+    "PublicHelper": {
+      "subtitle": "Общественный помощник",
+      "fromPrice": 30000,
+      "beforePrice": 0,
+      "symbol": "ГДОУ №112 Адмиралтейского района"
+    },
+    "MarketerOfMedicalMassageStudios": {
+      "subtitle": "Маркетолог студий медицинского массажа",
+      "fromPrice": 40000,
+      "beforePrice": 50000,
+      "symbol": "ЧОУ ДО Центр развития Егоза"
+    }
+  }
 }

@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form'
 import './Home.css'
+import './../routes/Filter/general.css'
 import Avatar from './../../assets/avatar/avatar.svg'
 import Vk from './../../assets/icon/vk.svg'
 import Inst from './../../assets/icon/instagram.svg'
 import Whats from './../../assets/icon/whatsapp.svg'
 import Logo from './../../assets/logo/desktop.svg'
 import axios from "axios";
+import {click} from "@testing-library/user-event/dist/click";
 
 
 const Footer = () => {
@@ -20,7 +22,7 @@ const Footer = () => {
         handleSubmit,
         reset,
     } = useForm({
-        mode: "onBlur"
+        mode: "onSubmit"
     });
 
     const onSubmit = (data) => {
@@ -68,6 +70,26 @@ const Footer = () => {
             .then(({data})=> setReview(data))
     },[]);
 
+    const addReview = (e) =>{
+        e.preventDefault();
+        axios.post('http://localhost:8080/review', {
+            name: e.target[0].value,
+            tel: e.target[1].value,
+            question1: e.target[2].value
+        }).then(({data})=> {
+            console.log(data);
+                e.target[0].value = '';
+                e.target[1].value = '';
+                e.target[2].value = '';
+        })
+    };
+
+    const schema = yup.object().shape({
+       name : yup
+           .string()
+           .match(/^([0-9]*)$/, "Эта строка не должна содержать цифры")
+           .required
+    });
 
     return (
         <footer className='footer'>
@@ -107,7 +129,7 @@ const Footer = () => {
                         </div>
 
                         {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                        <form action='http://localhost:8080/review' method='POST' className='footer__questions-form' onSubmit={(e)=> e.preventDefault()}>
+                        <form autoComplete='off' action='http://localhost:8080/review' method='POST' className='footer__questions-form' onSubmit={addReview}>
                             <div>
                                 <label>
 
@@ -115,24 +137,28 @@ const Footer = () => {
                                     <p className='footer__questions-form_title'>Как Вас зовут?</p>
                                     <input name='name' placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
                                            {...register('name', {
-                                               required: "Поле обязательно к заполнению",
+                                               required: "Поле обязательно к заполнению!",
                                                maxLength: {
                                                    value: 20,
                                                    message: 'максимум 20 символов!'
                                                }
                                            })}
                                     />
-                                    <div style={{height: 40}}>{errors?.name && <p>{errors?.name?.message || "Error!"}</p>}</div>
+                                    <div style={{height: 40}}>{errors?.name && <p className='form__error'>{errors?.name?.message || "Error!"}</p>}</div>
                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
 
                                     <p className='footer__questions-form_title'>Ваш телефон</p>
                                     <input name='tel' placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
                                            type="tel"
                                            {...register('tel', {
-                                               required: "Поле обязательно к заполнению",
+                                               required: "Поле обязательно к заполнению!",
+                                               minLength: {
+                                                   value: 10,
+                                                   message: 'минимум 10 цифр!'
+                                               }
                                            })}
                                     />
-                                    <div style={{height: 40}}>{errors?.tel && <p>{errors?.tel?.message || "Error!"}</p>}</div>
+                                    <div style={{height: 40}}>{errors?.tel && <p className='form__error'>{errors?.tel?.message || "Error!"}</p>}</div>
                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
 
                                 </label>
@@ -143,9 +169,17 @@ const Footer = () => {
                                 <label className='footer__questions-operator_block'>
                                     <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
                                     <textarea name='question1' className='footer__questions-operator_text'
-                                              placeholder='Вы можете задать несколько вопросов'>
- {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                              placeholder='Вы можете задать несколько вопросов'
+                                              {...register('question1', {
+                                                  required: "Поле обязательно к заполнению!",
+                                                  maxLength: {
+                                                      value: 150,
+                                                      message: 'максимум 150 символов!'
+                                                  }
+                                              })}
+                                    >
                                 </textarea>
+                                    <div style={{height: 40}}>{errors?.question1 && <p className='form__error'>{errors?.question1?.message || "Error!"}</p>}</div>
                                     <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
                                 </label>
                             </div>

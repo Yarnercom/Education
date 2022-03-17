@@ -22,4 +22,11 @@
   margin-bottom: 32px;
 }
 
+.form__error {
+  margin-top: 5px;
+  color: red;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=general.css.map */

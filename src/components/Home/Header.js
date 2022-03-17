@@ -8,7 +8,6 @@ import {Link, Routes, Route} from "react-router-dom";
 import Direction from "../routes/Filter/Direction";
 import './Home.css'
 import Universities from "../routes/Filter/Universities";
-import Btns from "./btns/Btns";
 import Enroll from "../routes/Enroll";
 
 

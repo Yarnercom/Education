@@ -8,9 +8,9 @@ import Search from '../../../assets/icon/search.svg'
 import './../switch/switch.css'
 import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
-
 import {Slider} from "@mui/material";
 import Btns from "../../Home/btns/Btns";
+
 
 const Direction = () => {
 

@@ -8,7 +8,6 @@ import Inst from './../../assets/icon/instagram.svg'
 import Whats from './../../assets/icon/whatsapp.svg'
 import Logo from './../../assets/logo/desktop.svg'
 import axios from "axios";
-import {click} from "@testing-library/user-event/dist/click";
 
 
 const Footer = () => {
@@ -22,7 +21,7 @@ const Footer = () => {
         handleSubmit,
         reset,
     } = useForm({
-        mode: "onSubmit"
+        mode: "onSubmit",
     });
 
     const onSubmit = (data) => {
@@ -84,12 +83,6 @@ const Footer = () => {
         })
     };
 
-    const schema = yup.object().shape({
-       name : yup
-           .string()
-           .match(/^([0-9]*)$/, "Эта строка не должна содержать цифры")
-           .required
-    });
 
     return (
         <footer className='footer'>
@@ -103,7 +96,7 @@ const Footer = () => {
                         </div>
                         {
                             data.map((item, i)=>(
-                                <div className='footer__form-list'>
+                                <div key={item.question} className='footer__form-list'>
                                     <div className='footer__form-toggle' onClick={()=> toggle(i)}>
                                         <h3 className='footer__form-title'>{item.question}</h3>
                                         <span className={`${select === i ? 'eks' : 'plus'} footer__form-plus`}> </span>
@@ -135,7 +128,7 @@ const Footer = () => {
 
                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
                                     <p className='footer__questions-form_title'>Как Вас зовут?</p>
-                                    <input name='name' placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
+                                    <input required name='name' placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
                                            {...register('name', {
                                                required: "Поле обязательно к заполнению!",
                                                maxLength: {
@@ -148,7 +141,7 @@ const Footer = () => {
                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
 
                                     <p className='footer__questions-form_title'>Ваш телефон</p>
-                                    <input name='tel' placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
+                                    <input required name='tel' placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
                                            type="tel"
                                            {...register('tel', {
                                                required: "Поле обязательно к заполнению!",
@@ -168,7 +161,7 @@ const Footer = () => {
                             <div className='footer__questions-operator'>
                                 <label className='footer__questions-operator_block'>
                                     <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
-                                    <textarea name='question1' className='footer__questions-operator_text'
+                                    <textarea required name='question1' className='footer__questions-operator_text'
                                               placeholder='Вы можете задать несколько вопросов'
                                               {...register('question1', {
                                                   required: "Поле обязательно к заполнению!",

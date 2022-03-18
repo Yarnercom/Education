@@ -7,10 +7,10 @@ import RouteContent from "./RouteContent/RouteContent";
 
 const Universities = () => {
 
-
     const [search, setSearch] = useState("");
 
     const [search1, setSearch1] = useState("");
+
 
     const [all, setAll] = useState([]);
 
@@ -18,7 +18,6 @@ const Universities = () => {
         axios('http://localhost:8080/universities')
             .then(({data}) => setAll(Object.values(data)))
     }, []);
-
 
 
     const searchHandler = (e) =>{
@@ -31,12 +30,11 @@ const Universities = () => {
         <section className='universities'>
             <div className='container'>
                 <Btns/>
-                <h3 className='general__title'>Вузы с онлайн образованием <br/>
-                    в Санкт-Петербурге
-                </h3>
-                <p className='general__subtitle'>
-                    Мы сотрудничаем с 24 престижными вузами по программам дистанционного онлайн-обучения.
-                </p>
+                    <h3 className='general__title'>Вузы с онлайн образованием <br/>
+                        в Санкт-Петербурге</h3>
+                    <p className='general__subtitle'>
+                        Мы сотрудничаем с 24 престижными вузами по программам дистанционного онлайн-обучения.
+                    </p>
                 <form className='general__form' onSubmit={(e)=> searchHandler(e)}>
                     <label className='direction__label'>
                         <img className='direction__search' src={Search} alt="search"/>
@@ -44,10 +42,10 @@ const Universities = () => {
                                type="text"
                                name='search'
                         />
-                        <p className='universities__total'>Всего 24 вуза</p>
                     </label>
                 </form>
-                <ul className='direction__content-card' style={{display: `${search && all.length ? 'inline-block': 'none'}`}}>
+                <ul className='direction__content-card'>
+
                     {
                         all.filter((el)=>el.title.toLowerCase().includes(search.toLowerCase())).map((item, idx)=>(
                             <li key={idx} className='direction__content-card_item'>
@@ -56,7 +54,7 @@ const Universities = () => {
                                     <p className='directions__cards-subtitle'>• от {item.price} ₽ семестр</p>
                                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                                     <img className='directions__cards-img' src={Economy} alt="Economy"/>
-                                    <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
+                                    <button type='button' className='directions__cards-btn'><span>{item.colDirection} </span>{item.direction}</button>
                                 </div>
                             </li>
                         ))

@@ -7,7 +7,7 @@ const RouteContent = () => {
 
     const [routeContent, setRouteContent] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         axios('http://localhost:8080/RouteContent1')
             .then(({data}) => setRouteContent(Object.values(data)))
     }, []);
@@ -18,7 +18,7 @@ const RouteContent = () => {
             <div className='container'>
                 <div className='routeContent__container'>
                     {
-                        routeContent.map((item, idx)=>(
+                        routeContent.map((item, idx) => (
                             <div key={idx}>
                                 <div className='routeContent__bodyTitle'>
                                     <h3 className='routeContent__title'>{item.title}</h3>
@@ -42,9 +42,10 @@ const RouteContent = () => {
                         <h3 className='routeContent__bodyTitleMap'>Места в Санкт-Петербурге, <br/>
                             где можно поучиться:</h3>
                         <div className='routeContent__map'>
+
                             <iframe
-                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b1ca251c94379c1bf8684eada07bd61d2930acda24f4147d15979cb325acd52&amp;source=constructor"
-                                width="743" height="447" frameBorder="0"></iframe>
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7bf7231a06aeb5fbd351174e9cc1bfad682307c3234a3514a7581dd22b8ddc26&amp;source=constructor"
+                                width="1216" height="456" frameBorder="0"></iframe>
                         </div>
                     </div>
                 </div>

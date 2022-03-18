@@ -78,37 +78,49 @@
       "id": 8,
       "title": "Московский Международный  Университет",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
     },
     "MoscowInternationalAcademy": {
       "id": 9,
       "title": "Московская международная  академия",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 3,
+      "direction": "направления"
     },
     "MoscowEconomicInstitute": {
       "id": 10,
       "title": "Московский экономический институт",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 3,
+      "direction": "направления"
     },
     "KurskInstituteOfManagementEconomicsAndBusiness": {
       "id": 11,
       "title": "Курский институт  менеджмента, экономики и бизнеса",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
     },
     "MoscowUniversityNamedAfterS.Yu.Witte": {
       "id": 12,
       "title": "Московский университет им.С.Ю. Витте",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 3,
+      "direction": "направления"
     },
     "TulaStateUniversity": {
       "id": 13,
       "title": "Тульский государственный университет",
       "price": 12500,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
     }
   },
   "mainTitle": {
@@ -142,5 +154,8 @@
       "beforePrice": 50000,
       "symbol": "ЧОУ ДО Центр развития Егоза"
     }
+  },
+  "college": {
+
   }
 }

@@ -92,6 +92,13 @@
   }
 }
 
+.direction__content-card{
+  display: flex;
+  column-gap: 30px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
 .direction__customCheckbox{
   position: absolute;
   z-index: -1;

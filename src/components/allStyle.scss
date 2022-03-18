@@ -20,6 +20,12 @@
   display: flex;
   column-gap: 72px;
 }
+
+
+.routeContent__container{
+  margin-top: 128px;
+}
+
 .routeContent__bodyTitle{
   display: flex;
   align-items: center;
@@ -96,3 +102,19 @@
   color: #000000;
   margin-top: 26px;
 }
+.routeContent__bodyMap{}
+.routeContent__bodyTitleMap{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 51px;
+  color: #000000;
+  margin-top: 117px;
+  margin-bottom: 50px;
+}
+.routeContent__map{}
+
+
+
+

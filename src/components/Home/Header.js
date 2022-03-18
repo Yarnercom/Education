@@ -2,7 +2,6 @@ import React from 'react';
 import Vk from './../../assets/icon/vk.svg';
 import Instagram from './../../assets/icon/instagram.svg';
 import Wats from './../../assets/icon/whatsapp.svg';
-import Avatar from './../../assets/avatar/avatar.svg';
 import Logo from './../../assets/logo/logoFirst.png'
 import {Link, Routes, Route} from "react-router-dom";
 import Direction from "../routes/Filter/Direction";
@@ -30,10 +29,7 @@ const Header = () => {
                             <img className='header__social-icon' src={Wats} alt="wats"/>
                         </div>
                         <div className='header__profile'>
-                            <div className='header__contact'>
-                                <img src={Avatar} alt="avatar"/>
-                                <p className='header__contact-tel'>+7 (902) 311 36 64</p>
-                            </div>
+
                             <div className='header__submit'>
                                 <button className='header__submit-btn' type='button'>подать документы</button>
                             </div>

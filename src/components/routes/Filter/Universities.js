@@ -25,14 +25,16 @@ const Universities = () => {
         setSearch(search1);
         e.preventDefault();
     };
-
-
     return (
         <section className='universities'>
             <div className='container'>
                 <Btns/>
                 <Title2/>
-                <form className='general__form' onSubmit={(e)=> searchHandler(e)}>
+                <form autoComplete='off' className='general__form' onSubmit={(e)=> searchHandler(e)}>
+
+
+
+
                     <label className='direction__label'>
                         <img className='direction__search' src={Search} alt="search"/>
                         <input onChange={(e)=> setSearch1(e.target.value)} className='direction__input' placeholder='Поиск по направлениям'

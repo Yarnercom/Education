@@ -118,4 +118,59 @@
   margin-bottom: 50px;
 }
 
+.posis {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+  column-gap: 20px;
+}
+
+.posis__link {
+  background: #000000;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 2px 15px 2px 5px;
+  opacity: 0;
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-end;
+}
+
+.posis__eks {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+.posis__eks::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  top: -11px;
+  left: -2px;
+  display: block;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.posis__eks::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  top: -11px;
+  left: -2px;
+  display: block;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+.posis__active {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=allStyle.css.map */

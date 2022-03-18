@@ -31,7 +31,7 @@ const College = () => {
             <div className='container'>
                 <Btns/>
                 <Title3/>
-                <form className='general__form' onSubmit={(e)=> searchHandler(e)}>
+                <form autoComplete='off' className='general__form' onSubmit={(e)=> searchHandler(e)}>
                     <label className='direction__label'>
                         <img className='direction__search' src={Search} alt="search"/>
                         <input onChange={(e)=> setSearch1(e.target.value)} className='direction__input' placeholder='Поиск по направлениям'

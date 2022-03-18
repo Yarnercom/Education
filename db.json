@@ -7,7 +7,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "Jurisprudence": {
       "id": 1,
@@ -16,7 +17,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "Journalism": {
       "id": 2,
@@ -25,7 +27,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "MedicalOptics": {
       "id": 3,
@@ -34,7 +37,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "TradingBusiness": {
       "id": 4,
@@ -43,7 +47,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "FireSafety": {
       "id": 5,
@@ -52,7 +57,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "LandAndPropertyRelations": {
       "id": 6,
@@ -61,7 +67,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     },
     "HotelBusiness": {
       "id": 7,
@@ -70,7 +77,8 @@
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
-      "onlineProtection": true
+      "onlineProtection": true,
+      "consultation": "консультация"
     }
   },
   "universities": {

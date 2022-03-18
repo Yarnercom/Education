@@ -130,9 +130,6 @@
       "image": ""
     }
   },
-  "review": [
-
-  ],
   "routeContent1": {
     "EducationalPsychologist": {
       "title": "Прямо сейчас в Санкт-Петербурге ищут:",
@@ -156,6 +153,32 @@
     }
   },
   "college": {
+    "CollegeOfInnovativeTechnologiesAndServiceGalaktikan": {
+      "id": 15,
+      "title": "Колледж Инновационных Технологий и Сервиса  «Галактика»",
+      "price": 12500,
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
+    },
+    "MoscowInternationalCollege\n": {
+      "id": 16,
+      "title": "Московский Международный  Колледж",
+      "price": 12500,
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
+    },
+    "InternationalOpenCollege": {
+      "id": 16,
+      "title": "Международный  Открытый  колледж",
+      "price": 12500,
+      "onlineProtection": true,
+      "colDirection": 2,
+      "direction": "направления"
+    }
+  },
+  "review": [
 
-  }
+  ]
 }

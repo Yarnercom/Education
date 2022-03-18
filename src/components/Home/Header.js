@@ -9,6 +9,7 @@ import Direction from "../routes/Filter/Direction";
 import './Home.css'
 import Universities from "../routes/Filter/Universities";
 import Enroll from "../routes/Enroll";
+import College from "../routes/Filter/College";
 
 
 const Header = () => {
@@ -75,6 +76,7 @@ const Header = () => {
             <Routes>
                 <Route path='/direction' element={<Direction/>}/>
                 <Route path='/universities' element={<Universities/>}/>
+                <Route path='/collage' element={<College/>}/>
                 <Route path='/enroll' element={<Enroll/>}/>
             </Routes>
         </header>

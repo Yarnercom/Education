@@ -3,6 +3,7 @@ import Search from "../../../assets/icon/search.svg";
 import axios from "axios";
 import Economy from "../../../assets/direction/экономика.svg";
 import Btns from "../../Home/btns/Btns";
+import Title2 from "./RouteContent/Title/Title2";
 import RouteContent from "./RouteContent/RouteContent";
 
 const Universities = () => {
@@ -30,11 +31,7 @@ const Universities = () => {
         <section className='universities'>
             <div className='container'>
                 <Btns/>
-                    <h3 className='general__title'>Вузы с онлайн образованием <br/>
-                        в Санкт-Петербурге</h3>
-                    <p className='general__subtitle'>
-                        Мы сотрудничаем с 24 престижными вузами по программам дистанционного онлайн-обучения.
-                    </p>
+                <Title2/>
                 <form className='general__form' onSubmit={(e)=> searchHandler(e)}>
                     <label className='direction__label'>
                         <img className='direction__search' src={Search} alt="search"/>

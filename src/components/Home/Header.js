@@ -9,6 +9,9 @@ import './Home.css'
 import Universities from "../routes/Filter/Universities";
 import Enroll from "../routes/Enroll";
 import College from "../routes/Filter/College";
+import Reviews from "../routes/Filter/Reviews";
+import LeaveFeedback from "../routes/Filter/RouteContent/LeaveFeedback";
+import Institutions from "../routes/Filter/Institutions";
 
 
 const Header = () => {
@@ -50,7 +53,7 @@ const Header = () => {
                         <Link className='header__navbar-list' to="/professions">Профессии</Link>
                     </li>
                     <li>
-                        <Link className='header__navbar-list' to="/reviews">Отзывы</Link>
+                        <Link className='header__navbar-list' to="/leaveFeedback">Отзывы</Link>
                     </li>
                     <li>
                         <Link className='header__navbar-list' to="/question">Вопрос-ответ</Link>
@@ -73,6 +76,10 @@ const Header = () => {
                 <Route path='/direction' element={<Direction/>}/>
                 <Route path='/universities' element={<Universities/>}/>
                 <Route path='/collage' element={<College/>}/>
+                <Route path='/leaveFeedback/*' element={<LeaveFeedback/>}>
+                    <Route path='reviews' element={<Reviews/>}/>
+                </Route>
+                <Route path='/institutions' element={<Institutions/>}/>
                 <Route path='/enroll' element={<Enroll/>}/>
             </Routes>
         </header>

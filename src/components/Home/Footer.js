@@ -24,10 +24,6 @@ const Footer = () => {
         mode: "onSubmit",
     });
 
-    const onSubmit = (data) => {
-        alert(JSON.stringify(data));
-        reset();
-    };
 
 
     const [select, setSelect] = useState('');
@@ -65,13 +61,13 @@ const Footer = () => {
     const [review, setReview] = useState([]);
 
     useEffect(()=>{
-        axios('http://localhost:8080/review')
+        axios('http://localhost:8080/question')
             .then(({data})=> setReview(data))
     },[]);
 
     const addReview = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:8080/review', {
+        axios.post('http://localhost:8080/question', {
             name: e.target[0].value,
             tel: e.target[1].value,
             question1: e.target[2].value
@@ -122,13 +118,13 @@ const Footer = () => {
                         </div>
 
                         {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                        <form autoComplete='off' action='http://localhost:8080/review' method='POST' className='footer__questions-form' onSubmit={addReview}>
+                        <form autoComplete='off' action='http://localhost:8080/question' method='POST' className='footer__questions-form' onSubmit={addReview}>
                             <div>
                                 <label>
 
                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
                                     <p className='footer__questions-form_title'>Как Вас зовут?</p>
-                                    <input required name='name' placeholder='Иванов Иван' className='footer__questions-form_input' type="text"
+                                    <input required name='name' placeholder='Ваше имя' className='footer__questions-form_input' type="text"
                                            {...register('name', {
                                                required: "Поле обязательно к заполнению!",
                                                maxLength: {

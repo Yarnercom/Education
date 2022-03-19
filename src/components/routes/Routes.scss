@@ -1,21 +1,29 @@
-.ape{
-  &__container{}
-  &__form{
-    &-input{}
+.ape {
+  &__container {
   }
-  &__direction{
+
+  &__form {
+    &-input {
+    }
+  }
+
+  &__direction {
     width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
-    &-content{
+
+    &-content {
       display: flex;
       column-gap: 36.19px;
       align-items: center;
     }
-    &-price{}
-    &-title{
+
+    &-price {
+    }
+
+    &-title {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -23,7 +31,8 @@
       line-height: 32px;
       color: #000000;
     }
-    &-subtitle{
+
+    &-subtitle {
       font-family: Inter, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -35,14 +44,16 @@
   }
 }
 
-.enroll{
-  &__first{
+.enroll {
+  &__first {
     background: url("./../../assets/background/enroll.png");
     width: 800px;
     height: 496px;
     padding: 40px 0 0 40px;
+    position: relative;
   }
-  &__title{
+
+  &__title {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -50,8 +61,9 @@
     line-height: 60px;
     color: #000000;
   }
-  &__container{
+
+  &__container {
     display: flex;
-   column-gap: 31px;
+    column-gap: 32px;
   }
 }

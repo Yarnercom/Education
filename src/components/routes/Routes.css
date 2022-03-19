@@ -33,6 +33,7 @@
   width: 800px;
   height: 496px;
   padding: 40px 0 0 40px;
+  position: relative;
 }
 .enroll__title {
   font-family: "Inter", sans-serif;
@@ -44,7 +45,7 @@
 }
 .enroll__container {
   display: flex;
-  column-gap: 31px;
+  column-gap: 32px;
 }
 
 /*# sourceMappingURL=Routes.css.map */

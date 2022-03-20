@@ -1,9 +1,10 @@
 import React from 'react';
+import Btns from "../../Home/btns/Btns";
 
 const Question = () => {
     return (
-        <div>
-
+        <div className='container'>
+            <Btns/>
         </div>
     );
 };

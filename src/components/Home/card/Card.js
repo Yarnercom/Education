@@ -98,7 +98,7 @@ const Card = () => {
             <div className='firstPage__order-block'>
 
                 <button
-
+                    disabled
                     className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`}
                         onClick={goNextPage} type='button'>К шагу {num1} из 3
                 </button>

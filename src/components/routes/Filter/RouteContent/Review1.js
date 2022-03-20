@@ -7,6 +7,7 @@ import third from './../../../../assets/picture/universites/3.png'
 import Anton from './../../../../assets/avatar/Anton.svg'
 import vk from './../../../../assets/icon/vk.svg'
 import axios from "axios";
+import Btns from "../../../Home/btns/Btns";
 
 const Review1 = () => {
 

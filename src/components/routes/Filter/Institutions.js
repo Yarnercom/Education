@@ -5,6 +5,7 @@ import {CSSTransition} from "react-transition-group";
 import Telegram from "../../../assets/icon/telegram.svg";
 import Whats from "../../../assets/icon/whatsapp.svg";
 import Vk from "../../../assets/icon/vk.svg";
+import Btns from "../../Home/btns/Btns";
 
 const Institutions = () => {
 
@@ -13,6 +14,7 @@ const Institutions = () => {
     return (
         <section className='education'>
             <div className='container'>
+                <Btns/>
                 <div className='education__container'>
                     <div className='education__bg'>
                         <h3 className='education__title'>Учебным <br/>

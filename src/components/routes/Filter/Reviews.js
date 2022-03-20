@@ -6,6 +6,7 @@ import './../../allStyle.css'
 import first from './../../../assets/picture/universites/1.png'
 import second from './../../../assets/picture/universites/2.png'
 import third from './../../../assets/picture/universites/3.png'
+import Btns from "../../Home/btns/Btns";
 
 const Reviews = () => {
 

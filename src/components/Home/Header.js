@@ -12,6 +12,9 @@ import College from "../routes/Filter/College";
 import Reviews from "../routes/Filter/Reviews";
 import LeaveFeedback from "../routes/Filter/RouteContent/LeaveFeedback";
 import Institutions from "../routes/Filter/Institutions";
+import Question from "../routes/Filter/Question";
+import Professions from "../routes/Filter/Professions";
+import Pages from "../routes/ Pages/Pages";
 
 
 const Header = () => {
@@ -80,7 +83,10 @@ const Header = () => {
                     <Route path='reviews' element={<Reviews/>}/>
                 </Route>
                 <Route path='/institutions' element={<Institutions/>}/>
+                <Route path='/question' element={<Question/>}/>
                 <Route path='/enroll' element={<Enroll/>}/>
+                <Route path='/professions' element={<Professions/>}/>
+                <Route path='/pages' element={<Pages/>}/>
             </Routes>
         </header>
     );

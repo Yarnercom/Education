@@ -1,9 +1,9 @@
 {
-  "all": {
+  "all1": {
     "economy": {
       "id": 0,
       "title": "Экономика",
-      "price": 10500,
+      "price": 9500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -23,7 +23,7 @@
     "Journalism": {
       "id": 2,
       "title": "Журналистика",
-      "price": 10500,
+      "price": 9500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -33,7 +33,7 @@
     "MedicalOptics": {
       "id": 3,
       "title": "Медицинская оптика",
-      "price": 10500,
+      "price": 11500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -43,7 +43,7 @@
     "TradingBusiness": {
       "id": 4,
       "title": "Торговое дело",
-      "price": 10500,
+      "price": 12500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -53,7 +53,7 @@
     "FireSafety": {
       "id": 5,
       "title": "Пожарная безопасность",
-      "price": 10500,
+      "price": 12500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -63,7 +63,7 @@
     "LandAndPropertyRelations": {
       "id": 6,
       "title": "Земельно-имущественные отношения",
-      "price": 10500,
+      "price": 11500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -73,7 +73,7 @@
     "HotelBusiness": {
       "id": 7,
       "title": "Гостиничное дело",
-      "price": 10500,
+      "price": 11500,
       "magistracy": 13000,
       "undergraduate": 12000,
       "specialty": 11000,
@@ -187,6 +187,156 @@
     }
   },
   "question": [],
-  "review": [
+  "review": [],
+  "all": [
+    {
+      "id": 0,
+      "title": "Экономика",
+      "price": 9500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "magistratura": "Магистратура",
+      "installmentPlan": "Рассрочка"
+    },
+    {
+      "id": 1,
+      "title": "Юриспруденция",
+      "price": 10500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "magistratura": "Магистратура",
+      "OnlineProtection": "Онлайн-защита"
+    },
+    {
+      "id": 2,
+      "title": "Журналистика",
+      "price": 9500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация"
+    },
+    {
+      "id": 3,
+      "title": "Медицинская оптика",
+      "price": 11500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "bacalawr": "Бакалавриат",
+      "installmentPlan": "Рассрочка"
+    },
+    {
+      "id": 4,
+      "title": "Торговое дело",
+      "price": 12500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "bacalawr": "Бакалавриат",
+      "transfer": "Можно перевестись",
+      "installmentPlan": "Рассрочка",
+      "OnlineProtection": "Онлайн-защита"
+    },
+    {
+      "id": 5,
+      "title": "Пожарная безопасность",
+      "price": 12500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "bacalawr": "бакалавриат"
+    },
+    {
+      "id": 6,
+      "title": "Земельно-имущественные отношения",
+      "price": 11500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "transfer": "Можно перевестись"
+    },
+    {
+      "id": 7,
+      "title": "Гостиничное дело",
+      "price": 11500,
+      "magistracy": 13000,
+      "undergraduate": 12000,
+      "specialty": 11000,
+      "onlineProtection": true,
+      "consultation": "консультация",
+      "transfer": "Можно перевестись"
+    }
+  ],
+  "tourism": [
+    {
+      "id": 0,
+      "title": "Туризм",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация"
+    }
+  ],
+    "Jurisprudence": [
+    {
+      "id": 1,
+      "title": "Юриспруденция",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация",
+      "online": "100% онлайн"
+    }
+  ],
+  "Economy": [
+    {
+      "id": 2,
+      "title": "Экономика",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация",
+      "online":"100% онлайн"
+    }
+  ],
+  "Journalism": [
+    {
+      "id": 3,
+      "title": "Журналистика",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация"
+    }
+  ],
+  "MedicalOptics": [
+    {
+      "id": 4,
+      "title": "Медицинская оптика",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация"
+    }
+  ],
+  "AdvertisingAndPublicRelations": [
+    {
+      "id": 5,
+      "title": "Реклама и связи с общественностью",
+      "price": 12500,
+      "date": "2,5",
+      "btn": "консультация"
+    }
   ]
 }

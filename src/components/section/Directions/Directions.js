@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './Directions.css'
-import Arrow from './../../../assets/icon/Vector.svg'
 import Average from "../../routes/Average";
 import Higher from "../../routes/Higher";
 import Ape from "../../routes/Ape";
@@ -28,7 +27,7 @@ const Directions = () => {
                             ДПО <sup className='sup'>36</sup>
                         </p>
                     </ul>
-                    <div className='line'></div>
+                    <div className='line'> </div>
 
                     {
                         content === 'higher' ? <Higher/>
@@ -36,10 +35,6 @@ const Directions = () => {
                             : content === 'ape' ? <Ape/>
                                 : ''
                     }
-                    <div className='directions__showMore'>
-                        <p className='directions__showMore-more'>Показать ещё 24 направления</p>
-                        <img src={Arrow} alt="arrow"/>
-                    </div>
                 </div>
             </div>
         </section>

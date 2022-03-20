@@ -1,5 +1,5 @@
 import React from 'react';
-import Tourism from "../../assets/direction/Туризм.svg";
+import Pages from "../../assets/direction/Туризм.svg";
 import Jurisprudence from "../../assets/direction/юриспруденция.svg";
 import Economy from "../../assets/direction/экономика.svg";
 import Journalism from "../../assets/direction/Журналистика.svg";
@@ -14,7 +14,7 @@ const Average = () => {
                     <p className='directions__cards-title'>Туризм</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
-                    <img className='directions__cards-img' src={Tourism} alt="Tourism"/>
+                    <img className='directions__cards-img' src={Tourism} alt="Pages"/>
                     <button type='button' className='directions__cards-btn'><span>...</span>консультация</button>
                 </div>
                 <div className='directions__cards-list jurisprudence'>

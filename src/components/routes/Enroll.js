@@ -10,6 +10,7 @@ import Telegram from "../../assets/icon/telegram.svg";
 import Whats from "../../assets/icon/whatsapp.svg";
 import Vk from "../../assets/icon/vk.svg";
 import Static from './../../assets/direction/Иконки статика.png'
+import Btns from "../Home/btns/Btns";
 
 
 const Enroll = () => {
@@ -30,6 +31,7 @@ const Enroll = () => {
     return (
         <section className='enroll'>
             <div className='container'>
+                <Btns/>
                 <div className='enroll__container'>
 
                     <div className='enroll__first'>

@@ -80,6 +80,7 @@
 
   &__navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 31px;
     margin-bottom: 70px;
@@ -103,6 +104,7 @@
         transition: .2s;
       }
     }
+    &-list.active{}
   }
 }
 

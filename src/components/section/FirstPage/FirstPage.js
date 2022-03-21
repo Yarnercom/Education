@@ -24,7 +24,8 @@ const FirstPage = () => {
                             Новгороде</h2>
                         <div className='firstPage__education-pos'>
 
-                            <img onClick={()=> setActive(!active)} className='firstPage__education-share' src={Share} alt="share"/>
+
+                            <p onClick={()=> setActive(!active)} className='firstPage__education-share'>Контакты</p>
                             <CSSTransition in={active} classNames='alert' timeout={300} unmountOnExit>
 
                                 <ul className={`${active ? ' share__active' : ''} share__body`}>

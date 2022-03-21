@@ -1,10 +1,19 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './style.css'
 import {useLocation} from "react-router-dom";
 import Home from "./components/Home/Home";
+import RingLoader from "react-spinners/RingLoader";
 
 function App() {
 
+    const [loaging, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    }, []);
 
     const location = useLocation();
     useEffect(() => {
@@ -14,7 +23,14 @@ function App() {
 
     return (
         <div className="App">
-            <Home/>
+            {
+                loaging ?
+                    <div className='background'>
+                        <RingLoader color={"#3D54AF"} loading={loaging} size={200}/>
+                    </div>
+                    :
+                    <Home/>
+            }
         </div>
     );
 }

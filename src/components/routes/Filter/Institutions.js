@@ -75,10 +75,10 @@ const Institutions = () => {
                     </div>
                     <div className='education__partner'>
                         <h3 className='education__title1'>Стать партнёром</h3>
-                        <form className='education__form' autoComplete='off' method='POST' onSubmit={addReview} action="https://formsubmit.co/arsdoroev@gmail.com">
+                        <form className='education__form' autoComplete='off' method='POST' action="https://formsubmit.co/arsdoroev@gmail.com">
                             <label className='education__label'>
                                 <p className='education__text'>Ваше имя:</p>
-                                <input name='name' className='education__input' type="text"
+                                <input required name='name' className='education__input' type="text"
                                        {...register('name', {
                                            required: "Поле обязательно к заполнению!",
                                            maxLength: {
@@ -90,7 +90,7 @@ const Institutions = () => {
                                 <div style={{height: 10}}>{errors?.name && <p className='form__error'>{errors?.name?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input name='education' className='education__input' placeholder='Учебное завведение' type="text"
+                                <input required name='education' className='education__input' placeholder='Учебное завведение' type="text"
                                        {...register('education', {
                                            required: "Поле обязательно к заполнению!",
                                            maxLength: {
@@ -102,7 +102,7 @@ const Institutions = () => {
                                 <div style={{height: 10}}>{errors?.education && <p className='form__error'>{errors?.education?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input name='tel' className='education__input' placeholder='Телефон' type="tel"
+                                <input required name='tel' className='education__input' placeholder='Телефон' type="tel"
                                        {...register('tel', {
                                            required: "Поле обязательно к заполнению!",
                                            maxLength: {
@@ -114,7 +114,7 @@ const Institutions = () => {
                                 <div style={{height: 10}}>{errors?.tel && <p className='form__error'>{errors?.tel?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input name='email' className='education__input' placeholder='Почта' type="email"
+                                <input required name='email' className='education__input' placeholder='Почта' type="email"
                                        {...register('email', {
                                            required: "Поле обязательно к заполнению!",
                                            minLength: {

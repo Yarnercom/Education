@@ -45,6 +45,22 @@
 .firstPage__education-share {
   cursor: pointer;
   position: relative;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  border: 1px solid #787878;
+  padding: 0 5px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.firstPage__education-share:hover {
+  border: 1px solid #333333;
+  background-color: #92929220;
+  transition: 0.2s;
 }
 .firstPage__education-city {
   position: absolute;

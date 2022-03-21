@@ -12,12 +12,6 @@ const Diploma = () => {
                         <p className='diploma__subtitle'>Все наши учебные заведения-партнёры <br/>
                             имеют госаккредитацию, а дипломы заносятся <br/>
                             в федеральный реестр.</p>
-                        <ul className='diploma__row'>
-                            <li className='diploma__row-list'>Высшее</li>
-                            <li className='diploma__row-list'>Среднее</li>
-                            <li className='diploma__row-list'>ДПО</li>
-                        </ul>
-                        <div className='line'></div>
                     </div>
                     <div className='diploma__right'>
                         <img className='diploma__img' src={diploma} alt="diploma"/>

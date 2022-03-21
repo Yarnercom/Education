@@ -26,35 +26,35 @@ const Higher = () => {
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                     <img className='directions__cards-img' src={Jurisprudence} alt="Jurisprudence"/>
-                    <Link to='/' className='directions__cards-btn'><span>...</span>консультация</Link>
+                    <Link to='/Jurisprudence' className='directions__cards-btn'><span>...</span>консультация</Link>
                 </div>
                 <div className='directions__cards-list economy'>
                     <p className='directions__cards-title'>Экономика</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                     <img className='directions__cards-img' src={Economy} alt="Economy"/>
-                    <Link to='/' className='directions__cards-btn'><span>...</span>консультация</Link>
+                    <Link to='/Economy' className='directions__cards-btn'><span>...</span>консультация</Link>
                 </div>
                 <div className='directions__cards-list journalism'>
                     <p className='directions__cards-title'>Журналистика</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                     <img className='directions__cards-img' src={Journalism} alt="Journalism"/>
-                    <Link to='/' className='directions__cards-btn'><span>...</span>консультация</Link>
+                    <Link to='/Journalism' className='directions__cards-btn'><span>...</span>консультация</Link>
                 </div>
                 <div className='directions__cards-list medical'>
                     <p className='directions__cards-title'>Медицинская оптика</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                     <img className='directions__cards-img' src={Medical} alt="Medical"/>
-                    <Link to='/' className='directions__cards-btn'><span>...</span>консультация</Link>
+                    <Link to='/MedicalOptics' className='directions__cards-btn'><span>...</span>консультация</Link>
                 </div>
                 <div className='directions__cards-list public'>
                     <p className='directions__cards-title'>Реклама и связи с общественностью</p>
                     <p className='directions__cards-subtitle'>• от 12 500 ₽ семестр</p>
                     <p className='directions__cards-subtitle'>• от 2,5 лет</p>
                     <img className='directions__cards-img' src={Public} alt="Public"/>
-                    <Link to='/' className='directions__cards-btn'><span>...</span>консультация</Link>
+                    <Link to='/AdvertisingAndPublicRelations' className='directions__cards-btn'><span>...</span>консультация</Link>
                 </div>
             </div>
         </section>

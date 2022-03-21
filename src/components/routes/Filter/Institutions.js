@@ -6,10 +6,39 @@ import Telegram from "../../../assets/icon/telegram.svg";
 import Whats from "../../../assets/icon/whatsapp.svg";
 import Vk from "../../../assets/icon/vk.svg";
 import Btns from "../../Home/btns/Btns";
+import axios from "axios";
+import {useForm} from "react-hook-form";
 
 const Institutions = () => {
 
     const [active, setActive] = useState(false);
+
+    const {
+        register,
+        formState: {
+            errors,
+        },
+        handleSubmit,
+        reset
+    } = useForm({
+        mode: "onSubmit",
+    });
+
+    const addReview = (e) =>{
+        e.preventDefault();
+        axios.post('http://localhost:8080/partner', {
+            name: e.target[0].value,
+            education: e.target[1].value,
+            tel: e.target[2].value,
+            email: e.target[3].value
+        }).then(({data})=> {
+            console.log(data);
+            e.target[0].value = '';
+            e.target[1].value = '';
+            e.target[2].value = '';
+            e.target[3].value = '';
+        })
+    };
 
     return (
         <section className='education'>
@@ -46,21 +75,57 @@ const Institutions = () => {
                     </div>
                     <div className='education__partner'>
                         <h3 className='education__title1'>Стать партнёром</h3>
-                        <form className='education__form' action="#">
+                        <form className='education__form' autoComplete='off' method='POST' onSubmit={addReview} action="https://formsubmit.co/arsdoroev@gmail.com">
                             <label className='education__label'>
                                 <p className='education__text'>Ваше имя:</p>
-                                <input required className='education__input' type="text"/>
+                                <input name='name' className='education__input' type="text"
+                                       {...register('name', {
+                                           required: "Поле обязательно к заполнению!",
+                                           maxLength: {
+                                               value: 20,
+                                               message: 'максимум 20 символов!'
+                                           }
+                                       })}
+                                />
+                                <div style={{height: 10}}>{errors?.name && <p className='form__error'>{errors?.name?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input required className='education__input' placeholder='Учебное завведение' type="text"/>
+                                <input name='education' className='education__input' placeholder='Учебное завведение' type="text"
+                                       {...register('education', {
+                                           required: "Поле обязательно к заполнению!",
+                                           maxLength: {
+                                               value: 40,
+                                               message: 'максимум 40 символов!'
+                                           }
+                                       })}
+                                />
+                                <div style={{height: 10}}>{errors?.education && <p className='form__error'>{errors?.education?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input required className='education__input' placeholder='Телефон' type="tel"/>
+                                <input name='tel' className='education__input' placeholder='Телефон' type="tel"
+                                       {...register('tel', {
+                                           required: "Поле обязательно к заполнению!",
+                                           maxLength: {
+                                               value: 11,
+                                               message: 'максимум 11 символов!'
+                                           }
+                                       })}
+                                />
+                                <div style={{height: 10}}>{errors?.tel && <p className='form__error'>{errors?.tel?.message || "Error!"}</p>}</div>
                             </label>
                             <label className='education__label'>
-                                <input required className='education__input' placeholder='Почта' type="email"/>
+                                <input name='email' className='education__input' placeholder='Почта' type="email"
+                                       {...register('email', {
+                                           required: "Поле обязательно к заполнению!",
+                                           minLength: {
+                                               value: 9,
+                                               message: 'минимум 9 символов!'
+                                           }
+                                       })}
+                                />
+                                <div style={{height: 10}}>{errors?.email && <p className='form__error'>{errors?.email?.message || "Error!"}</p>}</div>
                             </label>
-                            <button className='education__btn' type='submit'>Отправить заявку</button>
+                            <button className='education__btn active' type='submit'>Отправить заявку</button>
                         </form>
                         <p className='education__subtitle1'>Нажимая “Отправить”, Вы соглашаетесь с условиями обработки персональных данных</p>
                     </div>

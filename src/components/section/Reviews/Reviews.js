@@ -40,7 +40,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Антон Пабаловец</p>
                                         <p className='reviews__row-block_university'>Московский экономический институт</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +58,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Александр Никоноров</p>
                                         <p className='reviews__row-block_university'>Тульский государственный университет</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +76,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Василий Скворцов</p>
                                         <p className='reviews__row-block_university'>Московский экономический институт</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +94,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Василий Скворцов</p>
                                         <p className='reviews__row-block_university'>Московский экономический институт</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +112,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Василий Скворцов</p>
                                         <p className='reviews__row-block_university'>Московский экономический институт</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +130,6 @@ const Reviews = () => {
                                     <div className='reviews__row-block'>
                                         <p className='reviews__row-block_name'>Василий Скворцов</p>
                                         <p className='reviews__row-block_university'>Московский экономический институт</p>
-                                        <button className='reviews__row-block_btn'><span>...</span>написать в vk</button>
                                     </div>
                                 </div>
                             </div>

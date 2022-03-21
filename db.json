@@ -1,86 +1,4 @@
 {
-  "all1": {
-    "economy": {
-      "id": 0,
-      "title": "Экономика",
-      "price": 9500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "Jurisprudence": {
-      "id": 1,
-      "title": "Юриспруденция",
-      "price": 10500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "Journalism": {
-      "id": 2,
-      "title": "Журналистика",
-      "price": 9500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "MedicalOptics": {
-      "id": 3,
-      "title": "Медицинская оптика",
-      "price": 11500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "TradingBusiness": {
-      "id": 4,
-      "title": "Торговое дело",
-      "price": 12500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "FireSafety": {
-      "id": 5,
-      "title": "Пожарная безопасность",
-      "price": 12500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "LandAndPropertyRelations": {
-      "id": 6,
-      "title": "Земельно-имущественные отношения",
-      "price": 11500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    },
-    "HotelBusiness": {
-      "id": 7,
-      "title": "Гостиничное дело",
-      "price": 11500,
-      "magistracy": 13000,
-      "undergraduate": 12000,
-      "specialty": 11000,
-      "onlineProtection": true,
-      "consultation": "консультация"
-    }
-  },
   "universities": {
     "MoscowInternationalUniversity": {
       "id": 8,
@@ -187,6 +105,14 @@
     }
   },
   "question": [],
+  "partner": [
+    {
+      "name": "",
+      "tel": "",
+      "email": "",
+      "id": 1
+    }
+  ],
   "review": [],
   "all": [
     {
@@ -292,7 +218,7 @@
       "btn": "консультация"
     }
   ],
-    "Jurisprudence": [
+  "Jurisprudence": [
     {
       "id": 1,
       "title": "Юриспруденция",
@@ -309,7 +235,7 @@
       "price": 12500,
       "date": "2,5",
       "btn": "консультация",
-      "online":"100% онлайн"
+      "online": "100% онлайн"
     }
   ],
   "Journalism": [

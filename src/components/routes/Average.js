@@ -1,10 +1,10 @@
 import React from 'react';
-import Pages from "../../assets/direction/Туризм.svg";
 import Jurisprudence from "../../assets/direction/юриспруденция.svg";
 import Economy from "../../assets/direction/экономика.svg";
 import Journalism from "../../assets/direction/Журналистика.svg";
 import Medical from "../../assets/direction/Медицинская оптика.svg";
 import Public from "../../assets/direction/Реклама и связи с общественностью.svg";
+import Tourism from './../../assets/direction/Туризм.svg'
 
 const Average = () => {
     return (

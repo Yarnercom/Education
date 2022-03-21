@@ -18,10 +18,9 @@ const Footer = () => {
         formState: {
             errors,
         },
-        handleSubmit,
-        reset,
+        handleSubmit
     } = useForm({
-        mode: "onSubmit",
+        mode: "onBlur",
     });
 
 
@@ -67,16 +66,16 @@ const Footer = () => {
 
     const addReview = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:8080/question', {
+        axios.post('https://formsubmit.co/arsdoroev@gmail.com', {
             name: e.target[0].value,
             tel: e.target[1].value,
-            question1: e.target[2].value
+            question: e.target[2].value
         }).then(({data})=> {
             console.log(data);
                 e.target[0].value = '';
                 e.target[1].value = '';
                 e.target[2].value = '';
-        })
+        });
     };
 
 
@@ -117,64 +116,65 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                        <form autoComplete='off' action='http://localhost:8080/question' method='POST' className='footer__questions-form' onSubmit={addReview}>
-                            <div>
-                                <label>
+{/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                        <form autoComplete='off' action="https://formsubmit.co/arsdoroev@gmail.com" method='POST' className='footer__questions-form'>
+                             <div>
+                                 <label>
 
-                                    {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
-                                    <p className='footer__questions-form_title'>Как Вас зовут?</p>
-                                    <input required name='name' placeholder='Ваше имя' className='footer__questions-form_input' type="text"
-                                           {...register('name', {
-                                               required: "Поле обязательно к заполнению!",
-                                               maxLength: {
-                                                   value: 20,
-                                                   message: 'максимум 20 символов!'
-                                               }
-                                           })}
-                                    />
-                                    <div style={{height: 40}}>{errors?.name && <p className='form__error'>{errors?.name?.message || "Error!"}</p>}</div>
-                                    {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                     <p className='footer__questions-form_title'>Как Вас зовут?</p>
+                                     <input name='name' placeholder='Ваше имя' className='footer__questions-form_input' type="text"
+                                            {...register('name', {
+                                                required: "Поле обязательно к заполнению!",
+                                                maxLength: {
+                                                    value: 20,
+                                                    message: 'максимум 20 символов!'
+                                                }
+                                            })}
+                                     />
+                                     <div style={{height: 40}}>{errors?.name && <p className='form__error'>{errors?.name?.message || "Error!"}</p>}</div>
+                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
 
-                                    <p className='footer__questions-form_title'>Ваш телефон</p>
-                                    <input required name='tel' placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
-                                           type="tel"
-                                           {...register('tel', {
-                                               required: "Поле обязательно к заполнению!",
-                                               minLength: {
-                                                   value: 10,
-                                                   message: 'минимум 10 цифр!'
-                                               }
-                                           })}
-                                    />
-                                    <div style={{height: 40}}>{errors?.tel && <p className='form__error'>{errors?.tel?.message || "Error!"}</p>}</div>
-                                    {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+                                     <p className='footer__questions-form_title'>Ваш телефон</p>
+                                     <input name='tel' placeholder='+7 (000) 000 00 00' className='footer__questions-form_tel'
+                                            type="tel"
+                                            {...register('tel', {
+                                                required: "Поле обязательно к заполнению!",
+                                                minLength: {
+                                                    value: 10,
+                                                    message: 'минимум 10 цифр!'
+                                                }
+                                            })}
+                                     />
+                                     <div style={{height: 40}}>{errors?.tel && <p className='form__error'>{errors?.tel?.message || "Error!"}</p>}</div>
+                                     {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
 
-                                </label>
-                                <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
-                                    Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
-                            </div>
+                                 </label>
+                                 <p className='footer__questions-form_text'>Нажимая кнопку “Задать вопрос”,
+                                     Вы <br/> соглашаетесь с условиями обработки <br/> персональных данных</p>
+                             </div>
                             <div className='footer__questions-operator'>
                                 <label className='footer__questions-operator_block'>
                                     <p className='footer__questions-operator_title'>Напишите свои вопросы:</p>
-                                    <textarea required name='question1' className='footer__questions-operator_text'
+                                    <textarea name='question1' className='footer__questions-operator_text'
                                               placeholder='Вы можете задать несколько вопросов'
                                               {...register('question1', {
                                                   required: "Поле обязательно к заполнению!",
                                                   maxLength: {
-                                                      value: 150,
-                                                      message: 'максимум 150 символов!'
+                                                      value: 250,
+                                                      message: 'максимум 250 символов!'
                                                   }
                                               })}
                                     >
                                 </textarea>
-                                    <div style={{height: 40}}>{errors?.question1 && <p className='form__error'>{errors?.question1?.message || "Error!"}</p>}</div>
+                                    <div style={{height: 40}}>{errors?.question1 && <p className='form__error'>{errors?.question1.message || "Error!"}</p>}</div>
                                     <button className='footer__questions-operator_btn' type='submit'>Задать вопрос</button>
                                 </label>
+
                             </div>
                         </form>
 
-                        {/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
+{/*-----------------------------------------------------------------------------------------------------------------------------------------*/}
                     </div>
 
                     <div className='footer__basement'>

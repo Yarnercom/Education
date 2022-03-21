@@ -1,20 +1,13 @@
 import React from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
 import './Home.css'
-import Content from "../Content/Content";
-import {Routes, Route} from 'react-router-dom'
+import ContentBox from "../ContentBox";
 
 const Home = () => {
     return (
 
-            <>
-                <Header/>
-                <Routes>
-                    <Route path='/' element={<Content/>}/>
-                </Routes>
-                <Footer/>
-            </>
+            <div>
+                <ContentBox/>
+            </div>
     );
 };
 

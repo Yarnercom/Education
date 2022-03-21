@@ -1,5 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './../../section/FirstPage/FirstPage.css'
+import {useForm} from "react-hook-form";
+import axios from "axios";
+import {isDisabled} from "@testing-library/user-event/dist/utils";
 
 const Card = () => {
 
@@ -8,8 +11,8 @@ const Card = () => {
     function goNextPage() {
         if (page === 4) return;
         setPage((page) => page + 1);
-        setNum((num) => num + 1);
-        setNum1((num1) => num1 + 1)
+        setNum((num) => num < 3 ? num + 1 : 3);
+        setNum1((num1) => num1 < 4 ? num1 + 1 : '')
     }
 
     const [num, setNum] = useState(1);
@@ -70,7 +73,39 @@ const Card = () => {
         }
     ];
 
-    const [disable, setDisable] = useState('on');
+
+    const {
+        register,
+        formState: {
+            errors,
+        },
+        handleSubmit,
+        reset
+    } = useForm({
+        mode: "onSubmit",
+    });
+
+    const [review, setReview] = useState([]);
+
+    useEffect(()=>{
+        axios('http://localhost:8080/question')
+            .then(({data})=> setReview(data))
+    },[]);
+
+    const addReview = (e) =>{
+        e.preventDefault();
+        axios.post('http://localhost:8080/partner', {
+            name: e.target[0].value,
+            tel: e.target[1].value,
+            email: e.target[2].value
+        }).then(({data})=> {
+            console.log(data);
+            e.target[0].value = '';
+            e.target[1].value = '';
+            e.target[2].value = '';
+        })
+    };
+
 
     return (
         <div>
@@ -79,6 +114,7 @@ const Card = () => {
                 <span className='firstPage__order-frac'>{num}/3</span>
             </div>
             <p className='firstPage__order-subtitle'>Какое у Вас образование?</p>
+            <form autoComplete='off' className='formBody' method='POST' action="https://formsubmit.co/arsdoroev@gmail.com">
             <ul className='firstPage__order-navbar'>
                 {page === 1 && [
                     step1.map((item) => (
@@ -89,20 +125,67 @@ const Card = () => {
                 ]}
                 {page === 2 && [
                     step2.map((item) => (
-                        <li key={item.id}
-                            className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
-                            onClick={() => setChoose1(item.id)}>{item.title}</li>
+                           <li key={item.id}
+                               className={`${choose1 === item.id ? 'firstPage__order-navbar_list-active' : ''} firstPage__order-navbar_list`}
+                               onClick={() => setChoose1(item.id)}>{item.title}</li>
                     ))
                 ]}
+                {
+                    page === 3 ?
+
+                           <div>
+                               <label className='fix'>
+                                   <div style={{height: 10}}>{errors?.name && <p className='form__error1'>{errors?.name?.message || "Error!"}</p>}</div>
+                                   <input required name='name' className='formInput' type="text" placeholder='Имя'
+                                          {...register('name', {
+                                              required: "-",
+                                              maxLength: {
+                                                  value: 20,
+                                                  message: '-'
+                                              }
+                                          })}
+                                   />
+                               </label>
+                               <label className='fix'>
+                                   <input required name='tel' className='formInput' type="tel" placeholder='Телефон'
+                                          {...register('tel', {
+                                              required: "-",
+                                              maxLength: {
+                                                  value: 11,
+                                                  message: '-'
+                                              }
+                                          })}
+                                   />
+                               </label>
+                               <label className='fix'>
+                                   <div style={{height: 10}}>{errors?.email && <p className='form__error1'>{errors?.email?.message || "Error!"}</p>}</div>
+                                   <input required name='email' className='formInput' type="email" placeholder='E-mail'
+                                          {...register('email', {
+                                              required: "-",
+                                              minLength: {
+                                                  value: 9,
+                                                  message: '-'
+                                              }
+                                          })}
+                                   />
+                               </label>
+                           </div>
+
+                        : ''
+                }
             </ul>
             <div className='firstPage__order-block'>
 
-                <button
-                    disabled
-                    className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`}
+                { num1 !== 4 ?
+                    <button
+                        className={`${choose !== choose1 ? 'firstPage__order-btn_active' : ''} firstPage__order-btn`}
                         onClick={goNextPage} type='button'>К шагу {num1} из 3
-                </button>
+                    </button>
+                    :
+                    <button type='submit' className='firstPage__order-btn_active formBtn'>Отправить заявку</button>
+                }
             </div>
+            </form>
         </div>
     );
 };

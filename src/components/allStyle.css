@@ -318,6 +318,12 @@
   color: #4A4A4A;
 }
 
+.education__btn.active {
+  background-color: #2400FF;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
 .education__abi {
   background: #F2F2F2;
   width: 68%;
@@ -510,6 +516,55 @@
   position: absolute;
   bottom: 18px;
   left: 40px;
+}
+
+.formBtn {
+  background: #252525;
+  border-radius: 4px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #4A4A4A;
+  padding: 14px 78px;
+}
+
+.formName {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  color: #787878;
+}
+
+.formInput {
+  width: 100%;
+  padding: 9px 0;
+  background-color: #000000;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333333;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787878;
+  outline: none;
+}
+.formInput::placeholder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #787878;
+}
+
+.form__error1 {
+  color: red;
 }
 
 /*# sourceMappingURL=allStyle.css.map */

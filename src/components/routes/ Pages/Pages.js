@@ -6,36 +6,12 @@ import Economy from "./../../../assets/direction/экономика.svg";
 const Pages = () => {
 
     const [page, setPage] = useState([]);
-    const [page1, setPage1] = useState([]);
-    const [page2, setPage2] = useState([]);
-    const [page3, setPage3] = useState([]);
-    const [page4, setPage4] = useState([]);
-    const [page5, setPage5] = useState([]);
 
     useEffect(() => {
         axios('http://localhost:8080/tourism')
             .then(({data}) => setPage(Object.values(data)))
     }, []);
-    useEffect(() => {
-        axios('http://localhost:8080/Jurisprudence')
-            .then(({data}) => setPage1(Object.values(data)))
-    }, []);
-    useEffect(() => {
-        axios('http://localhost:8080/Economy')
-            .then(({data}) => setPage2(Object.values(data)))
-    }, []);
-    useEffect(() => {
-        axios('http://localhost:8080/Journalism')
-            .then(({data}) => setPage3(Object.values(data)))
-    }, []);
-    useEffect(() => {
-        axios('http://localhost:8080/MedicalOptics')
-            .then(({data}) => setPage4(Object.values(data)))
-    }, []);
-    useEffect(() => {
-        axios('http://localhost:8080/AdvertisingAndPublicRelations')
-            .then(({data}) => setPage5(Object.values(data)))
-    }, []);
+
 
 
     return (

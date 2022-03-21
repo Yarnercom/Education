@@ -57,7 +57,7 @@ const Direction = () => {
                                 </div>
 
                                 <ul className='filterBody'>
-                                    <SortList text={sort} setSort={setSort}/>
+                                    <SortList text='Все' setSort={setSort}/>
                                     <SortList text='дешевле' setSort={setSort}/>
                                     <SortList text='дороже' setSort={setSort}/>
                                     <SortList text='магистратура' setSort={setSort}/>

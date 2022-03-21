@@ -4,10 +4,9 @@ import Vitte from './../../../../assets/picture/universites/vitte.png'
 import first from './../../../../assets/picture/universites/1.png'
 import second from './../../../../assets/picture/universites/2.png'
 import third from './../../../../assets/picture/universites/3.png'
-import Anton from './../../../../assets/avatar/Anton.svg'
-import vk from './../../../../assets/icon/vk.svg'
+import Git from './../../../../assets/avatar/github.png'
+import {Link} from 'react-router-dom'
 import axios from "axios";
-import Btns from "../../../Home/btns/Btns";
 
 const Review1 = () => {
 
@@ -55,14 +54,13 @@ const Review1 = () => {
                                <div key={item.id} className='review1__rightBg'>
                                    <div className='review1__rightFlex'>
                                        <div className='review1__rightBodyAvatar'>
-                                           <img src={Anton} alt="avatar"/>
+                                           <img src={Git} alt="Git"/>
                                            <div>
                                                <p className='review1__rightTitle'>{item.name}</p>
                                            </div>
                                        </div>
                                        <div className='review1__rightBodyBtn'>
-                                           <img src={vk} alt="vk"/>
-                                           <button className='review1__rightbtn'>...написать в vk</button>
+                                           <Link className='review1__rightbtn' to='reviews'>...Добавить отзыв</Link>
                                        </div>
                                    </div>
                                    <p className='review1__comment'>{item.review}</p>

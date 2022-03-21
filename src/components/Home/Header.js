@@ -7,14 +7,20 @@ import {Link, Routes, Route} from "react-router-dom";
 import Direction from "../routes/Filter/Direction";
 import './Home.css'
 import Universities from "../routes/Filter/Universities";
-import Enroll from "../routes/Enroll";
 import College from "../routes/Filter/College";
 import Reviews from "../routes/Filter/Reviews";
 import LeaveFeedback from "../routes/Filter/RouteContent/LeaveFeedback";
 import Institutions from "../routes/Filter/Institutions";
 import Question from "../routes/Filter/Question";
+import Enroll from "../routes/Filter/Enroll";
 import Professions from "../routes/Filter/Professions";
 import Pages from "../routes/ Pages/Pages";
+import Jurisprudence from "../routes/ Pages/Jurisprudence";
+import Economy from "../routes/ Pages/Economy";
+import Journalism from "../routes/ Pages/Journalism";
+import MedicalOptics from "../routes/ Pages/MedicalOptics";
+import AdvertisingAndPublicRelations from "../routes/ Pages/AdvertisingAndPublicRelations";
+
 
 
 const Header = () => {
@@ -70,9 +76,6 @@ const Header = () => {
                     <li>
                         <Link className='header__navbar-list' to="/contacts">Контакты</Link>
                     </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/more">Ещё</Link>
-                    </li>
                 </ul>
             </div>
             <Routes>
@@ -87,6 +90,11 @@ const Header = () => {
                 <Route path='/enroll' element={<Enroll/>}/>
                 <Route path='/professions' element={<Professions/>}/>
                 <Route path='/pages' element={<Pages/>}/>
+                <Route path='/Jurisprudence' element={<Jurisprudence/>}/>
+                <Route path='/Economy' element={<Economy/>}/>
+                <Route path='/Journalism' element={<Journalism/>}/>
+                <Route path='/MedicalOptics' element={<MedicalOptics/>}/>
+                <Route path='/AdvertisingAndPublicRelations' element={<AdvertisingAndPublicRelations/>}/>
             </Routes>
         </header>
     );

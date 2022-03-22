@@ -106,6 +106,7 @@
 
   .header__navbar-list {
     border-radius: 28px 0 0 28px;
+    border-bottom: 3px solid #282c34;
   }
 
   .header {
@@ -214,6 +215,14 @@
   }
 }
 @media (max-width: 480px) {
+  .header__navbar {
+    width: 50%;
+  }
+
+  .header__navbar-list {
+    font-size: 15px;
+  }
+
   .firstPage__education-title {
     font-size: 30px;
   }
@@ -252,6 +261,87 @@
 
   .reviews {
     display: none;
+  }
+
+  .footer__form-questions {
+    font-size: 20px;
+  }
+
+  .footer__form-subtitle {
+    font-size: 13px;
+  }
+
+  .footer__form-title {
+    font-size: 20px;
+  }
+
+  .footer__questions-item {
+    width: 100%;
+  }
+
+  .footer__basement-logo {
+    width: 150px;
+    height: 40px;
+  }
+
+  .footer__basement-program {
+    font-size: 20px;
+  }
+
+  .footer__basement-agreement {
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .header__navbar {
+    padding: 100px 20px 150px 0;
+    width: 100%;
+  }
+
+  .header__navbar-list {
+    border-bottom: 3px solid #282c34;
+  }
+
+  .firstPage__education-title {
+    font-size: 20px;
+  }
+
+  .firstPage__education {
+    width: 375px;
+  }
+
+  .firstPage__order {
+    width: 375px;
+  }
+
+  .univer__container img {
+    width: 150px;
+    height: 40px;
+  }
+
+  .directions {
+    padding: 0 20px;
+  }
+
+  .directions__container {
+    width: 375px;
+  }
+
+  .directions__cards {
+    justify-content: center;
+    width: 375px;
+  }
+
+  .diploma__container {
+    width: 375px;
+  }
+
+  .edMob__container {
+    width: 375px;
+  }
+
+  .footer {
+    width: 435px;
   }
 }
 

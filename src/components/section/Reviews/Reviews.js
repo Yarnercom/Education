@@ -19,9 +19,9 @@ const Reviews = () => {
 
                     </div>
                     <Swiper
-                        modules={[Thumbs]}
-                        spaceBetween={50}
-                        slidesPerView={3}
+                        modules={[]}
+                        spaceBetween={30}
+                        slidesPerView={2}
                         Thumbs={{ clickable: true }}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}

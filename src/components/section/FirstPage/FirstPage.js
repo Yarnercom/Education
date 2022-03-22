@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './FirstPage.css'
-import Share from './../../../assets/icon/share.svg'
 import City from './../../../assets/picture/City.png'
 import {CSSTransition} from 'react-transition-group'
 import Card from "../../Home/card/Card";

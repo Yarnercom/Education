@@ -21,7 +21,7 @@ const EducationMobile = () => {
                         </Link>
                     </div>
                     <div className='edMob__right'>
-                        <img src={Check} alt="check"/>
+                        <img className='edMob__img' src={Check} alt="check"/>
                     </div>
                 </div>
                 <div className='edMob__container2'>

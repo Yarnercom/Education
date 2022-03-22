@@ -1,42 +1,40 @@
-
-
-  .section{
+.section{
   display: none;
-  }
+}
 
-  .menu-btn{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #F2F2F2;
-    border-radius: 50%;
-    position: relative;
-  }
-  .span,
-  .span::after,
-  .span::before{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -1px;
-    width: 20px;
-    height: 2px;
-    background-color: #222;
-  }
-  .span::after,
-  .span::before{
-    content: '';
-    display: block;
-    transition: 0.5s;
-  }
+.menu-btn{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  position: relative;
+}
+.span,
+.span::after,
+.span::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.span::after,
+.span::before{
+  content: '';
+  display: block;
+  transition: 0.5s;
+}
 
-  .span::before{
-    transform: translateY(-5px);
-  }
-  .span::after{
-    transform: translateY(5px);
-  }
+.span::before{
+  transform: translateY(-5px);
+}
+.span::after{
+  transform: translateY(5px);
+}
 
 
 @media (min-width: 1200px) {
@@ -46,15 +44,12 @@
 
 
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .header__social{
     display: none;
   }
   .section{
     display: block;
-  }
-  .header__navbar{
-    display: none;
   }
   .header{
     padding: 0 30px;
@@ -69,13 +64,14 @@
     width: 100%;
   }
 
+
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header__social{
     display: none;
   }
   .header{
-    padding: 0 30px;
+    padding: 5px 30px;
   }
   .section{
     display: block;
@@ -83,29 +79,148 @@
   .header__navbar{
     position: fixed;
     z-index: 3;
+    top: -31px;
     flex-direction: column;
     row-gap: 15px;
     align-items: flex-end;
+    background-color: #adb5bd;
+    width: 40%;
+    height: 100%;
+    padding: 100px 10px 40px 0;
+  }
+  .menu-btn{
+    z-index: 5;
   }
   .header__navbar.close{
-    right: -100%;
+    transition: all .3s ease 0s;
+    right: 0;
   }
   .firstPage{
+    margin-top: 100px;
     padding: 0 30px;
   }
   .header__navbar-list{
     border-radius: 28px 0 0 28px;
   }
-  .header__navbar.open{
-    right: 400px;
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    background-color: #fff;
   }
+  .header__navbar.open{
+    transition: all .3s ease 0s;
+    right: -100%;
+  }
+  .firstPage__education-title{
+    font-size: 35px;
+  }
+  .firstPage__education-subtitle{
+    font-size: 18px;
+  }
+  .firstPage__education-city{
+    width: 100px;
+    height: 100px;
+  }
+  .card{
+    width: 100%;
+  }
+  .firstPage__order{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .univer{
+    padding: 0 30px;
+  }
+  .univer__container{
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .directions{
+    padding: 0 20px;
+  }
+  .diploma{
+    padding: 0 20px;
+  }
+  .diploma__right{
+    display: none;
+  }
+  .reviews{
+    padding: 0 20px;
+  }
+  .edMob{
+    padding: 0 20px;
+  }
+  .edMob__right{
+    display: none;
+  }
+  .footer__container{
+    padding: 0 20px;
+  }
+  .footer__form-questions{
+    font-size: 35px;
+  }
+  .footer__form-title{
+    width: 100%;
+    font-size: 20px;
+  }
+  .footer__questions-item{
+    width: 50%;
+  }
+  .footer__questions{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .footer__questions-form{
+    flex-direction: column;
+  }
+  .footer__questions-form_text{
+    display: none;
+  }
+  .footer__basement{
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+  }
+
 }
 @media (max-width: 480px) {
+
+  .firstPage__education-title{
+    font-size: 30px;
+  }
+  .firstPage__education-subtitle{
+    font-size: 16px;
+  }
+  .firstPage__education-city{
+    width: 70px;
+    height: 70px;
+  }
+  .firstPage__education-price{
+    width: 60%;
+  }
+  .directions__navbar{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .directions__cards{
+    justify-content: center;
+  }
+  .ape__direction{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .ape__direction-content{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .reviews{
+    display: none;
+  }
 
 }
 @media (max-width: 320px) {
 
 }
-
-
-

@@ -3,6 +3,7 @@ import './Directions.css'
 import Average from "../../routes/Average";
 import Higher from "../../routes/Higher";
 import Ape from "../../routes/Ape";
+import './../../../media/media.css'
 
 
 const Directions = () => {

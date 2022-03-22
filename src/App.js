@@ -12,7 +12,7 @@ function App() {
         setLoading(true);
         setTimeout(() => {
             setLoading(false)
-        }, 3000)
+        }, 100)
     }, []);
 
     const location = useLocation();

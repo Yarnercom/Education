@@ -8,9 +8,9 @@ const Diploma = () => {
             <div className='container'>
                 <div className='diploma__container'>
                     <div className='diploma__left'>
-                        <h2 className='diploma__title'>Вы получите — диплом <br/> гособразца</h2>
-                        <p className='diploma__subtitle'>Все наши учебные заведения-партнёры <br/>
-                            имеют госаккредитацию, а дипломы заносятся <br/>
+                        <h2 className='diploma__title'>Вы получите — диплом гособразца</h2>
+                        <p className='diploma__subtitle'>Все наши учебные заведения-партнёры
+                            имеют госаккредитацию, а дипломы заносятся
                             в федеральный реестр.</p>
                     </div>
                     <div className='diploma__right'>

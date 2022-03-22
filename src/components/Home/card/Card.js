@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './../../section/FirstPage/FirstPage.css'
 import {useForm} from "react-hook-form";
 import axios from "axios";
-import {isDisabled} from "@testing-library/user-event/dist/utils";
-
+import './../../../media/media.css'
 const Card = () => {
 
     const [page, setPage] = useState(1);
@@ -108,7 +107,7 @@ const Card = () => {
 
 
     return (
-        <div>
+        <div className='card'>
             <div className='firstPage__order-dFlex'>
                 <p className='firstPage__order-title'>Подобрать обучение</p>
                 <span className='firstPage__order-frac'>{num}/3</span>

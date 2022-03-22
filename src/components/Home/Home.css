@@ -89,8 +89,8 @@
 }
 .footer {
   background: #000000;
-  padding-top: 50px;
-  margin-top: 128px;
+  padding-top: 100px;
+  margin-top: 58px;
 }
 .footer__form {
   margin-bottom: 128px;
@@ -161,9 +161,12 @@
 }
 .footer__questions {
   background-color: #ffffff;
-  padding: 64px 64px 50px 64px;
+  padding: 40px 30px;
   display: flex;
-  justify-content: space-between;
+  column-gap: 40px;
+}
+.footer__questions-item {
+  width: 30%;
 }
 .footer__questions-title {
   font-family: Inter, sans-serif;
@@ -196,8 +199,9 @@
   color: #787878;
 }
 .footer__questions-form {
+  width: 50%;
   display: flex;
-  column-gap: 72px;
+  column-gap: 40px;
 }
 .footer__questions-form_title {
   font-family: Inter, sans-serif;

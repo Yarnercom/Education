@@ -1,18 +1,20 @@
 .edMob{
   &__container{
     display: flex;
-    margin-top: 150px;
-    justify-content: space-between;
+    margin-top: 50px;
+   column-gap: 40px;
   }
   &__container2{
-    margin-top: 128px;
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    column-gap: 40px;
   }
   &__left{
-    width: 50%;
+
   }
-  &__right{}
+  &__right{
+    margin-bottom: 30px;
+  }
   &__title{
     font-family: Inter, sans-serif;
     font-style: normal;
@@ -29,7 +31,7 @@
     font-size: 22px;
     line-height: 40px;
     color: #000000;
-    margin-bottom: 43px;
+    margin-bottom: 33px;
   }
   &__btn{
     font-family: Inter, sans-serif;

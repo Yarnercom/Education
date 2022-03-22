@@ -54,38 +54,38 @@ const Header = () => {
 
                     </div>
                 </div>
-                <ul className={`${burger} header__navbar`}>
-                    <li>
-                        <Link className='header__navbar-list' to="/direction">Направления</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/universities">Вузы</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/collage">Колледжи</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/professions">Профессии</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/leaveFeedback">Отзывы</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/question">Вопрос-ответ</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/enroll">Как поступить</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navbar-list' to="/institutions">Учебным заведениям</Link>
-                    </li>
-                    <li>
-                        <a href='#popup' className='header__navbar-list'>Контакты</a>
-                    </li>
-                </ul>
+                    <ul className={`${burger} header__navbar`}>
+                        <li>
+                            <Link className='header__navbar-list' to="/direction">Направления</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/universities">Вузы</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/collage">Колледжи</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/professions">Профессии</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/leaveFeedback">Отзывы</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/question">Вопрос-ответ</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/enroll">Как поступить</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navbar-list' to="/institutions">Учебным заведениям</Link>
+                        </li>
+                        <li>
+                            <a href='#popup' className='header__navbar-list'>Контакты</a>
+                        </li>
+                    </ul>
             </div>
             <div id='popup' className='contact'>
-                <a href="#" className='contact__area'></a>
+                <a href="#" className='contact__area'> </a>
                 <div className='contact__body'>
                     <div className='contact__content'>
                         <a className='contact__close' href="#">x</a>

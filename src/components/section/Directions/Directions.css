@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .directions {
-  margin-top: 128px;
+  margin-top: 50px;
 }
 .directions__title {
   font-family: Inter, sans-serif;
@@ -42,7 +42,7 @@
 .directions__cards-list {
   background-size: cover;
   padding: 24px 32px;
-  width: 384px;
+  width: 340px;
   height: 248px;
   position: relative;
 }

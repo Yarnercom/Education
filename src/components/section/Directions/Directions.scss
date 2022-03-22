@@ -1,5 +1,5 @@
 .directions {
-  margin-top: 128px;
+  margin-top: 50px;
 
   &__title {
     font-family: Inter, sans-serif;
@@ -15,8 +15,7 @@
     display: flex;
     column-gap: 70px;
     align-items: center;
-
-    &-list {
+    &-list{
       border-bottom: 3px solid transparent;
       padding-bottom: 15px;
       font-family: Inter, sans-serif;
@@ -45,7 +44,7 @@
     &-list {
       background-size: cover;
       padding: 24px 32px;
-      width: 384px;
+      width: 340px;
       height: 248px;
       position: relative;
     }

@@ -110,8 +110,8 @@
 
 .footer {
   background: #000000;
-  padding-top: 50px;
-  margin-top: 128px;
+  padding-top: 100px;
+  margin-top: 58px;
 
   &__container {
   }
@@ -195,11 +195,12 @@
 
   &__questions {
     background-color: #ffffff;
-    padding: 64px 64px 50px 64px;
+    padding: 40px 30px;
     display: flex;
-    justify-content: space-between;
+   column-gap: 40px;
 
     &-item {
+      width: 30%;
     }
 
     &-title {
@@ -240,8 +241,9 @@
     }
 
     &-form {
+      width: 50%;
       display: flex;
-      column-gap: 72px;
+      column-gap: 40px;
 
       &_title {
         font-family: Inter, sans-serif;
